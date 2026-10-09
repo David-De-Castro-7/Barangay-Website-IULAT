@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="iUlat - Web-Based Barangay Community Announcements and Real-Time Event Dissemination Platform"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b2375"
+    >
+
+    <title>iUlat | Barangay Community Information Portal</title>
+
+
+    <!-- Global Styles -->
+    <link
+        rel="stylesheet"
+        href="frontend/assets/css/global.css"
+    >
+
+    <!-- Landing Page Styles -->
+    <link
+        rel="stylesheet"
+        href="frontend/assets/css/landing.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+
+                <!-- BRAND -->
+
+                <a
+                    href="index.html"
+                    class="brand"
+                >
+
+                    <div class="brand-logo">
+                        iU
+                    </div>
+
+                    <div class="brand-text">
+
+                        <span class="brand-name">
+                            iUlat
+                        </span>
+
+                        <span class="brand-subtitle">
+                            Barangay Information Portal
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- NAVIGATION -->
+
+                <div
+        class="nav-links"
+        id="navLinks"
+        >
+
+        <a
+        href="index.html"
+        class="nav-link active"
+        >
+        Home
+        </a>
+
+        <a
+        href="frontend/pages/announcements.html"
+        class="nav-link"
+        >
+        Announcements
+        </a>
+
+        <a
+        href="frontend/pages/reports.html"
+        class="nav-link"
+         >
+        Report an Issue
+        </a>
+
+        <a          
+        href="services.html"
+        class="nav-link"
+        >
+        Services
+        </a>
+
+        <a
+        href="frontend/pages/about.html"
+        class="nav-link"
+        >
+        About
+        </a>
+
+        <a
+        href="frontend/pages/contact.html"
+        class="nav-link"
+        >
+        Contact
+        </a>
+
+       </div>
+
+                <!-- AUTH BUTTONS -->
+
+                <div
+                    class="nav-actions"
+                    id="navActions"
+                >
+
+                    <a
+                        href="frontend/pages/auth/dashboard/resident-login.html"
+                        class="btn btn-outline btn-sm"
+                    >
+                        Sign In
+                    </a>
+
+                    <a
+                        href="frontend/pages/auth/resident-register.html"
+                        class="btn btn-primary btn-sm"
+                    >
+                        Register
+                    </a>
+
+                </div>
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-grid">
+
+
+                    <!-- HERO CONTENT -->
+
+                    <div class="hero-content">
+
+                        <span class="hero-label">
+                            BARANGAY OFFICIAL CHANNEL
+                        </span>
+
+
+                        <h1>
+                            Stay Informed.
+                            <br>
+                            Stay Connected.
+                            <br>
+                            Stay Safe.
+                        </h1>
+
+
+                        <p class="hero-description">
+                            Get the latest official announcements,
+                            community updates, and important information
+                            directly from your barangay.
+                        </p>
+
+
+                        <!-- SEARCH -->
+
+                        <form
+                            class="hero-search"
+                            action="frontend/pages/announcements.html"
+                            method="get"
+                        >
+
+                            <input
+                                type="search"
+                                name="search"
+                                placeholder="Search announcements..."
+                                aria-label="Search announcements"
+                            >
+
+                            <button type="submit">
+                                Search
+                            </button>
+
+                        </form>
+
+
+                        <div class="hero-links">
+
+                            <a
+                                href="frontend/pages/announcements.html"
+                            >
+                                View Latest Announcements
+                                <span>→</span>
+                            </a>
+
+                            <a
+                                href="frontend/pages/auth/resident-register.html"
+                            >
+                                Create Resident Account
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- HERO CARD -->
+
+                    <div class="hero-visual">
+
+                        <div class="hero-announcement-card">
+
+
+                            <div class="hero-announcement-top">
+
+                                <div>
+
+                                    <span class="small-label">
+                                        LATEST ANNOUNCEMENT
+                                    </span>
+
+                                    <h3>
+                                        Barangay General Assembly
+                                    </h3>
+
+                                </div>
+
+
+                                <span class="verified">
+
+                                    <span class="verified-icon">
+                                        ✓
+                                    </span>
+
+                                    Verified
+
+                                </span>
+
+                            </div>
+
+
+
+                            <div class="hero-announcement-body">
+
+                                <div class="announcement-symbol">
+                                    📢
+                                </div>
+
+                                <div>
+
+                                    <p>
+                                        All residents are encouraged
+                                        to attend the upcoming barangay
+                                        general assembly.
+                                    </p>
+
+                                    <span class="announcement-date">
+                                        October 24, 2026 · 2:00 PM
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="hero-announcement-footer">
+
+                                <span>
+                                    Posted by Barangay Office
+                                </span>
+
+                                <a
+                                    href="frontend/pages/announcements.html"
+                                >
+                                    View Details →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- VERIFIED NOTIFICATION -->
+
+                        <div class="hero-notification">
+
+                            <div class="notification-circle">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Official Information
+                                </strong>
+
+                                <span>
+                                    Verified by Barangay Office
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LATEST ANNOUNCEMENTS
+             ================================================= -->
+
+        <section class="section announcements-section">
+
+            <div class="container">
+
+
+                <div class="section-header">
+
+                    <span class="section-label">
+                        LATEST UPDATES
+                    </span>
+
+                    <h2>
+                        Latest Announcements
+                    </h2>
+
+                    <p>
+                        Stay updated with official information
+                        and announcements from your barangay.
+                    </p>
+
+                </div>
+
+
+
+                <div class="announcement-grid">
+
+
+                    <!-- CARD 1 -->
+
+                    <article class="announcement-card">
+
+                        <div class="announcement-card-image">
+
+                            <span>
+                                ANNOUNCEMENT
+                            </span>
+
+                        </div>
+
+
+                        <div class="announcement-card-content">
+
+                            <div class="announcement-author">
+
+                                <div class="author-avatar">
+                                    B
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Barangay Office
+                                    </strong>
+
+                                    <span>
+                                        September 2026
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <span class="badge badge-primary">
+                                Community
+                            </span>
+
+
+                            <h3>
+                                Barangay General Assembly
+                            </h3>
+
+
+                            <p>
+                                Residents are invited to attend the
+                                upcoming barangay general assembly.
+                            </p>
+
+
+                            <a
+                                href="frontend/pages/announcements.html"
+                                class="card-link"
+                            >
+                                View Details →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- CARD 2 -->
+
+                    <article class="announcement-card">
+
+                        <div class="announcement-card-image health">
+
+                            <span>
+                                HEALTH PROGRAM
+                            </span>
+
+                        </div>
+
+
+                        <div class="announcement-card-content">
+
+                            <div class="announcement-author">
+
+                                <div class="author-avatar">
+                                    B
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Barangay Health Office
+                                    </strong>
+
+                                    <span>
+                                        September 2026
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <span class="badge badge-success">
+                                Health
+                            </span>
+
+
+                            <h3>
+                                Free Medical Check-Up
+                            </h3>
+
+
+                            <p>
+                                Free medical consultation and basic
+                                health services will be available
+                                for residents.
+                            </p>
+
+
+                            <a
+                                href="frontend/pages/announcements.html"
+                                class="card-link"
+                            >
+                                View Details →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- CARD 3 -->
+
+                    <article class="announcement-card">
+
+                        <div class="announcement-card-image community">
+
+                            <span>
+                                COMMUNITY
+                            </span>
+
+                        </div>
+
+
+                        <div class="announcement-card-content">
+
+                            <div class="announcement-author">
+
+                                <div class="author-avatar">
+                                    B
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Barangay Office
+                                    </strong>
+
+                                    <span>
+                                        September 2026
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <span class="badge badge-primary">
+                                Community
+                            </span>
+
+
+                            <h3>
+                                Community Clean-Up Drive
+                            </h3>
+
+
+                            <p>
+                                Join the community clean-up drive and
+                                help maintain a clean and safe barangay.
+                            </p>
+
+
+                            <a
+                                href="frontend/pages/announcements.html"
+                                class="card-link"
+                            >
+                                View Details →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <div class="section-action">
+
+                    <a
+                        href="frontend/pages/announcements.html"
+                        class="btn btn-primary"
+                    >
+                        View All Announcements
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WHY iULAT
+             ================================================= -->
+
+        <section class="why-section">
+
+            <div class="container">
+
+
+                <div class="why-header">
+
+                    <span class="section-label">
+                        ABOUT iULAT
+                    </span>
+
+                    <h2>
+                        Connecting the Barangay
+                        with Its Residents
+                    </h2>
+
+                    <p>
+                        iUlat is a digital barangay communication
+                        platform designed to provide residents with
+                        accessible, timely, and reliable community
+                        information.
+                    </p>
+
+                </div>
+
+
+
+                <div class="why-grid">
+
+
+                    <article class="why-card">
+
+                        <div class="why-icon">
+                            i
+                        </div>
+
+                        <span>
+                            ABOUT iULAT
+                        </span>
+
+                        <h3>
+                            Reliable Information
+                        </h3>
+
+                        <p>
+                            Access official barangay announcements
+                            and community updates from verified sources.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="why-card">
+
+                        <div class="why-icon">
+                            ✓
+                        </div>
+
+                        <span>
+                            STAY CONNECTED
+                        </span>
+
+                        <h3>
+                            Connected and Informed
+                        </h3>
+
+                        <p>
+                            Stay informed about important activities,
+                            announcements, and community concerns.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="why-card">
+
+                        <div class="why-icon">
+                            ⚡
+                        </div>
+
+                        <span>
+                            BETTER COMMUNICATION
+                        </span>
+
+                        <h3>
+                            Better Barangay Communication
+                        </h3>
+
+                        <p>
+                            Improve communication between barangay
+                            officials and residents through one
+                            centralized platform.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             VISION & MISSION
+             ================================================= -->
+
+        <section class="vision-mission-section">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-label">
+                        OUR PURPOSE
+                    </span>
+
+                    <h2>
+                        Vision and Mission
+                    </h2>
+
+                    <p>
+                        iUlat supports clearer, more accessible, and more reliable communication
+                        between the barangay government and the residents it serves.
+                    </p>
+
+                </div>
+
+                <div class="vision-mission-grid">
+
+                    <article class="vision-mission-card">
+
+                        <span class="vision-mission-label">
+                            VISION
+                        </span>
+
+                        <h3>
+                            A better-informed and connected barangay community.
+                        </h3>
+
+                        <p>
+                            Residents can easily access official information and stay aware of
+                            important barangay activities, advisories, programs, and community concerns.
+                        </p>
+
+                    </article>
+
+                    <article class="vision-mission-card">
+
+                        <span class="vision-mission-label">
+                            MISSION
+                        </span>
+
+                        <h3>
+                            Make official barangay information easier to find and understand.
+                        </h3>
+
+                        <p>
+                            iUlat provides one accessible channel for verified announcements,
+                            important notices, emergency information, and community updates.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EMERGENCY HOTLINES
+             ================================================= -->
+
+        <section class="emergency-section">
+
+            <div class="container">
+
+                <div class="emergency-container">
+
+
+                    <div class="section-header">
+
+                        <span class="section-label">
+                            GET HELP
+                        </span>
+
+                        <h2>
+                            Emergency Hotlines
+                        </h2>
+
+                        <p>
+                            Important emergency, safety, health,
+                            and public assistance contact numbers.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- MAIN 911 -->
+
+                    <div class="emergency-main">
+
+                        <div class="emergency-main-icon">
+                            !
+                        </div>
+
+
+                        <div class="emergency-main-content">
+
+                            <span>
+                                NATIONAL EMERGENCY HOTLINE
+                            </span>
+
+                            <strong>
+                                911
+                            </strong>
+
+                            <p>
+                                For police, fire, medical, and
+                                other emergency assistance.
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="tel:911"
+                            class="emergency-call-btn"
+                        >
+                            Call 911
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- HOTLINES -->
+
+                    <div class="hotline-grid">
+
+
+                        <a
+                            href="tel:911"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                P
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    POLICE ASSISTANCE
+                                </span>
+
+                                <h3>
+                                    Philippine National Police
+                                </h3>
+
+                                <strong>
+                                    911
+                                </strong>
+
+                                <p>
+                                    Emergency police assistance
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:911"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                F
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    FIRE & RESCUE
+                                </span>
+
+                                <h3>
+                                    Bureau of Fire Protection
+                                </h3>
+
+                                <strong>
+                                    911
+                                </strong>
+
+                                <p>
+                                    Fire and rescue emergencies
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:143"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                R
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    EMERGENCY ASSISTANCE
+                                </span>
+
+                                <h3>
+                                    Philippine Red Cross
+                                </h3>
+
+                                <strong>
+                                    143
+                                </strong>
+
+                                <p>
+                                    Humanitarian assistance
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:911"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                N
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    DISASTER RESPONSE
+                                </span>
+
+                                <h3>
+                                    NDRRMC
+                                </h3>
+
+                                <strong>
+                                    911
+                                </strong>
+
+                                <p>
+                                    Disaster response assistance
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:911"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                D
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    SOCIAL WELFARE
+                                </span>
+
+                                <h3>
+                                    DSWD
+                                </h3>
+
+                                <strong>
+                                    911
+                                </strong>
+
+                                <p>
+                                    Social welfare assistance
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:911"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                C
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    MARITIME SAFETY
+                                </span>
+
+                                <h3>
+                                    Philippine Coast Guard
+                                </h3>
+
+                                <strong>
+                                    911
+                                </strong>
+
+                                <p>
+                                    Maritime emergency assistance
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:136"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                M
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    TRAFFIC ASSISTANCE
+                                </span>
+
+                                <h3>
+                                    MMDA
+                                </h3>
+
+                                <strong>
+                                    136
+                                </strong>
+
+                                <p>
+                                    Traffic and road assistance
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:1342"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                T
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    TRANSPORTATION
+                                </span>
+
+                                <h3>
+                                    Department of Transportation
+                                </h3>
+
+                                <strong>
+                                    1342
+                                </strong>
+
+                                <p>
+                                    Transportation concerns
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:1342"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                L
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    TRANSPORT SERVICES
+                                </span>
+
+                                <h3>
+                                    Land Transportation Office
+                                </h3>
+
+                                <strong>
+                                    1342
+                                </strong>
+
+                                <p>
+                                    Driver and vehicle concerns
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:1342"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                L
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    PUBLIC TRANSPORT
+                                </span>
+
+                                <h3>
+                                    LTFRB
+                                </h3>
+
+                                <strong>
+                                    1342
+                                </strong>
+
+                                <p>
+                                    Public transportation concerns
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:8284-0800"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                W
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    WEATHER SERVICES
+                                </span>
+
+                                <h3>
+                                    PAGASA
+                                </h3>
+
+                                <strong>
+                                    8284-0800
+                                </strong>
+
+                                <p>
+                                    Weather information
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <a
+                            href="tel:8426-1468"
+                            class="hotline-card"
+                        >
+
+                            <div class="hotline-icon">
+                                V
+                            </div>
+
+                            <div class="hotline-content">
+
+                                <span>
+                                    EARTHQUAKE & VOLCANO
+                                </span>
+
+                                <h3>
+                                    PHIVOLCS
+                                </h3>
+
+                                <strong>
+                                    8426-1468
+                                </strong>
+
+                                <p>
+                                    Earthquake and volcanic information
+                                </p>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="hotline-note">
+
+                        <span>
+                            ⓘ
+                        </span>
+
+                        <p>
+                            For life-threatening emergencies,
+                            call <strong>911</strong> immediately.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CALL TO ACTION
+             ================================================= -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <div class="cta-text">
+
+                        <span>
+                            STAY CONNECTED WITH YOUR COMMUNITY
+                        </span>
+
+                        <h2>
+                            Never miss an important
+                            barangay update.
+                        </h2>
+
+                        <p>
+                            Create your resident account to receive
+                            timely announcements and important
+                            community information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="cta-actions">
+
+                        <a
+                            href="frontend/pages/auth/resident-register.html"
+                            class="btn btn-white btn-lg"
+                        >
+                            Register as a Resident
+                        </a>
+
+                        <a
+                            href="frontend/pages/announcements.html"
+                            class="cta-link"
+                        >
+                            Browse Announcements →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="brand"
+                    >
+
+                        <div class="brand-logo">
+                            i
+                        </div>
+
+                        <div class="brand-text">
+
+                            <span class="brand-name">
+                                iUlat
+                            </span>
+
+                            <span class="brand-subtitle">
+                                Barangay Information Portal
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <p>
+                        Connecting barangay officials and residents
+                        through reliable, accessible, and verified
+                        community information.
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="frontend/pages/announcements.html">
+                        Announcements
+                    </a>
+
+                    <a href="frontend/pages/reports.html">
+                        Report an Issue
+                    </a>
+
+                    <a href="frontend/pages/about.html">
+                        About iUlat
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Residents
+                    </h3>
+
+                    <a href="frontend/pages/auth/resident-login.html">
+                        Resident Login
+                    </a>
+
+                    <a href="frontend/pages/auth/resident-register.html">
+                        Register
+                    </a>
+
+                    <a href="frontend/pages/reports.html">
+                        Submit a Report
+                    </a>
+
+                    <a href="frontend/pages/contact.html">
+                        Contact Us
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Officials
+                    </h3>
+
+                    <a href="frontend/pages/auth/official-login.html">
+                        Official Login
+                    </a>
+
+                    <a href="frontend/pages/auth/official-register.html">
+                        Official Registration
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 iUlat. All rights reserved.
+                </p>
+
+                <p>
+                    Barangay Community Information Platform
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+         ===================================================== -->
+
+    <script>
+
+        const mobileMenuBtn =
+            document.getElementById("mobileMenuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+        const navActions =
+            document.getElementById("navActions");
+
+
+        mobileMenuBtn.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    this.getAttribute(
+                        "aria-expanded"
+                    ) === "true";
+
+
+                this.setAttribute(
+                    "aria-expanded",
+                    String(!isOpen)
+                );
+
+
+                navLinks.classList.toggle(
+                    "mobile-open"
+                );
+
+
+                navActions.classList.toggle(
+                    "mobile-open"
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

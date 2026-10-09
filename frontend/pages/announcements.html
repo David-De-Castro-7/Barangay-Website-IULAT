@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Announcements | iUlat</title>
+
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/landing.css">
+
+    
+</head>
+
+<body class="announcements-page">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+
+                <!-- BRAND -->
+
+                <a
+                    href="../../../index.html"
+                    class="brand"
+                >
+
+                    <div class="brand-logo">
+                        iU
+                    </div>
+
+                    <div class="brand-text">
+
+                        <span class="brand-name">
+                            iUlat
+                        </span>
+
+                        <span class="brand-subtitle">
+                            Barangay Information Portal
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- NAVIGATION -->
+
+                <div
+                    class="nav-links"
+                    id="navLinks"
+                >
+
+                    <a
+                        href="../../../index.html"
+                        class="nav-link"
+                    >
+                        Home
+                    </a>
+
+                    <a
+                        href="announcements.html"
+                        class="nav-link active"
+                    >
+                        Announcements
+                    </a>
+
+                    <a
+                        href="reports.html"
+                        class="nav-link"
+                    >
+                        Report an Issue
+                    </a>
+
+                    <a
+                        href="services.html"
+                        class="nav-link"
+                    >
+                        Services
+                    </a>
+
+                    <a
+                        href="about.html"
+                        class="nav-link"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        href="contact.html"
+                        class="nav-link"
+                    >
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- AUTH -->
+
+                <div class="nav-actions">
+
+                    <a
+                        href="auth/resident-login.html"
+                        class="btn btn-outline btn-sm"
+                    >
+                        Sign In
+                    </a>
+
+                    <a
+                        href="auth/resident-register.html"
+                        class="btn btn-primary btn-sm"
+                    >
+                        Register
+                    </a>
+
+                </div>
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Toggle navigation"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         PAGE HERO
+    =========================================== -->
+
+    <section class="announcement-page-hero">
+
+        <div class="announcement-page-hero-content">
+
+            <span class="announcement-page-label">
+                BARANGAY INFORMATION CENTER
+            </span>
+
+            <h1>
+                Announcements
+            </h1>
+
+            <p>
+                Find verified barangay advisories, notices, services,
+                events, programs, and other important community updates
+                in one place.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
+
+    <main class="announcements-main">
+
+        <div class="announcements-container">
+
+
+            <!-- SEARCH -->
+
+            <div class="announcement-search">
+
+                <input
+                    type="search"
+                    id="announcementSearch"
+                    placeholder="Search announcements..."
+                    aria-label="Search announcements"
+                >
+
+                <button
+                    type="button"
+                    id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- CATEGORY FILTERS -->
+
+            <div class="announcement-filters">
+
+                <button
+                    type="button"
+                    class="announcement-filter active"
+                    data-category="all">
+                    All Announcements
+                </button>
+
+                <button
+                    type="button"
+                    class="announcement-filter"
+                    data-category="emergency">
+                    🚨 Emergency Advisories
+                </button>
+
+                <button
+                    type="button"
+                    class="announcement-filter"
+                    data-category="notice">
+                    📜 Barangay Notices & Ordinances
+                </button>
+
+                <button
+                    type="button"
+                    class="announcement-filter"
+                    data-category="service">
+                    💰 Services & Payouts
+                </button>
+
+                <button
+                    type="button"
+                    class="announcement-filter"
+                    data-category="event">
+                    🎉 Events & Programs
+                </button>
+
+            </div>
+
+
+            <!-- FEED -->
+
+            <section class="announcement-feed"
+                     id="announcementFeed">
+
+
+                <!-- ==================================
+                     EMERGENCY ANNOUNCEMENT
+                =================================== -->
+
+                <article
+                    class="announcement-feed-card"
+                    data-category="emergency"
+                    data-search="flood advisory heavy rain emergency flooding weather">
+
+                    <div class="announcement-header">
+
+                        <div class="announcement-avatar">
+                            B
+                        </div>
+
+                        <div class="announcement-meta">
+
+                            <h4>
+                                Barangay San Isidro
+                            </h4>
+
+                            <span>
+                                Today • 10:30 AM
+                            </span>
+
+                        </div>
+
+                        <span class="announcement-badge emergency">
+                            Emergency
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-body">
+
+                        <h2>
+                            🚨 Flood Advisory
+                        </h2>
+
+                        <p>
+                            Residents are advised to remain alert due
+                            to continuous heavy rainfall that may cause
+                            flooding in low-lying areas of the barangay.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Avoid flooded roads when possible.
+                            </li>
+
+                            <li>
+                                Keep important documents and belongings
+                                in a safe location.
+                            </li>
+
+                            <li>
+                                Follow official evacuation instructions
+                                if issued.
+                            </li>
+
+                        </ul>
+
+                        <a
+                            href="announcements/announcement-details.html"
+                            class="announcement-read-more">
+                            Read Full Advisory →
+                        </a>
+
+                    </div>
+
+
+                    <div class="announcement-stats">
+
+                        <span>
+                            128 residents acknowledged
+                        </span>
+
+                        <span>
+                            Official Advisory
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-actions">
+
+                        <button
+                            type="button"
+                            class="feed-btn acknowledge-btn">
+
+                            👍 Acknowledge
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feed-btn share-btn">
+
+                            🔗 Copy Link / Share
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==================================
+                     BARANGAY NOTICE
+                =================================== -->
+
+                <article
+                    class="announcement-feed-card"
+                    data-category="notice"
+                    data-search="ordinance barangay notice curfew ordinance community rules">
+
+                    <div class="announcement-header">
+
+                        <div class="announcement-avatar">
+                            B
+                        </div>
+
+                        <div class="announcement-meta">
+
+                            <h4>
+                                Barangay San Isidro
+                            </h4>
+
+                            <span>
+                                Yesterday • 3:15 PM
+                            </span>
+
+                        </div>
+
+                        <span class="announcement-badge notice">
+                            Notice
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-body">
+
+                        <h2>
+                            Updated Barangay Ordinance Notice
+                        </h2>
+
+                        <p>
+                            Residents are reminded to observe the
+                            updated barangay regulations and community
+                            guidelines effective this month.
+                        </p>
+
+                        <a
+                            href="announcements/announcement-details.html"
+                            class="announcement-read-more">
+                            Read Full Notice →
+                        </a>
+
+                    </div>
+
+
+                    <div class="announcement-stats">
+
+                        <span>
+                            86 residents acknowledged
+                        </span>
+
+                        <span>
+                            Barangay Notice
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-actions">
+
+                        <button
+                            type="button"
+                            class="feed-btn acknowledge-btn">
+
+                            👍 Acknowledge
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feed-btn share-btn">
+
+                            🔗 Copy Link / Share
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==================================
+                     SERVICES / PAYOUTS
+                =================================== -->
+
+                <article
+                    class="announcement-feed-card"
+                    data-category="service"
+                    data-search="senior citizen payout pension services assistance distribution">
+
+                    <div class="announcement-header">
+
+                        <div class="announcement-avatar">
+                            B
+                        </div>
+
+                        <div class="announcement-meta">
+
+                            <h4>
+                                Barangay San Isidro
+                            </h4>
+
+                            <span>
+                                July 15, 2026 • 9:00 AM
+                            </span>
+
+                        </div>
+
+                        <span class="announcement-badge service">
+                            Services
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-body">
+
+                        <h2>
+                            Senior Citizen Pension Distribution
+                        </h2>
+
+                        <p>
+                            The scheduled distribution of senior citizen
+                            assistance will be held at the Barangay Hall.
+                            Eligible beneficiaries are reminded to bring
+                            the required identification documents.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Senior Citizen ID
+                            </li>
+
+                            <li>
+                                Valid identification
+                            </li>
+
+                            <li>
+                                Claim stub, if applicable
+                            </li>
+
+                        </ul>
+
+                        <a
+                            href="announcements/announcement-details.html"
+                            class="announcement-read-more">
+                            View Complete Details →
+                        </a>
+
+                    </div>
+
+
+                    <div class="announcement-stats">
+
+                        <span>
+                            214 residents acknowledged
+                        </span>
+
+                        <span>
+                            Public Service
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-actions">
+
+                        <button
+                            type="button"
+                            class="feed-btn acknowledge-btn">
+
+                            👍 Acknowledge
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feed-btn share-btn">
+
+                            🔗 Copy Link / Share
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==================================
+                     EVENT
+                =================================== -->
+
+                <article
+                    class="announcement-feed-card"
+                    data-category="event"
+                    data-search="barangay clean up drive community event program cleanup">
+
+                    <div class="announcement-header">
+
+                        <div class="announcement-avatar">
+                            B
+                        </div>
+
+                        <div class="announcement-meta">
+
+                            <h4>
+                                Barangay San Isidro
+                            </h4>
+
+                            <span>
+                                July 14, 2026 • 2:00 PM
+                            </span>
+
+                        </div>
+
+                        <span class="announcement-badge event">
+                            Event
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-body">
+
+                        <h2>
+                            Community Clean-Up Drive
+                        </h2>
+
+                        <p>
+                            Residents are invited to participate in the
+                            upcoming barangay-wide clean-up drive as part
+                            of our continuing community environmental
+                            program.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Date: July 25, 2026
+                            </li>
+
+                            <li>
+                                Assembly: 7:00 AM
+                            </li>
+
+                            <li>
+                                Meeting Point: Barangay Hall
+                            </li>
+
+                        </ul>
+
+                        <a
+                            href="announcements/announcement-details.html"
+                            class="announcement-read-more">
+                            View Event Details →
+                        </a>
+
+                    </div>
+
+
+                    <div class="announcement-stats">
+
+                        <span>
+                            63 residents acknowledged
+                        </span>
+
+                        <span>
+                            Community Program
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-actions">
+
+                        <button
+                            type="button"
+                            class="feed-btn acknowledge-btn">
+
+                            👍 Acknowledge
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feed-btn share-btn">
+
+                            🔗 Copy Link / Share
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- EMPTY SEARCH RESULT -->
+
+            <div
+                class="announcement-empty"
+                id="announcementEmpty">
+
+                <h3>
+                    No announcements found
+                </h3>
+
+                <p>
+                    Try another search term or select a different
+                    announcement category.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+ <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="brand"
+                    >
+
+                        <div class="brand-logo">
+                            i
+                        </div>
+
+                        <div class="brand-text">
+
+                            <span class="brand-name">
+                                iUlat
+                            </span>
+
+                            <span class="brand-subtitle">
+                                Barangay Information Portal
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <p>
+                        Connecting barangay officials and residents
+                        through reliable, accessible, and verified
+                        community information.
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="frontend/pages/announcements.html">
+                        Announcements
+                    </a>
+
+                    <a href="frontend/pages/reports.html">
+                        Report an Issue
+                    </a>
+
+                    <a href="frontend/pages/about.html">
+                        About iUlat
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Residents
+                    </h3>
+
+                    <a href="frontend/pages/auth/resident-login.html">
+                        Resident Login
+                    </a>
+
+                    <a href="frontend/pages/auth/resident-register.html">
+                        Register
+                    </a>
+
+                    <a href="frontend/pages/reports.html">
+                        Submit a Report
+                    </a>
+
+                    <a href="frontend/pages/contact.html">
+                        Contact Us
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Officials
+                    </h3>
+
+                    <a href="frontend/pages/auth/official-login.html">
+                        Official Login
+                    </a>
+
+                    <a href="frontend/pages/auth/official-register.html">
+                        Official Registration
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 iUlat. All rights reserved.
+                </p>
+
+                <p>
+                    Barangay Community Information Platform
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script>
+
+        const filters =
+            document.querySelectorAll(".announcement-filter");
+
+        const cards =
+            document.querySelectorAll(".announcement-feed-card");
+
+        const searchInput =
+            document.getElementById("announcementSearch");
+
+        const searchButton =
+            document.getElementById("searchButton");
+
+        const emptyMessage =
+            document.getElementById("announcementEmpty");
+
+
+        let selectedCategory = "all";
+
+
+        /*
+         * FILTER ANNOUNCEMENTS
+         */
+
+        function filterAnnouncements() {
+
+            const searchTerm =
+                searchInput.value.trim().toLowerCase();
+
+            let visibleCount = 0;
+
+
+            cards.forEach(function(card) {
+
+                const category =
+                    card.dataset.category;
+
+                const searchableText =
+                    card.dataset.search.toLowerCase();
+
+                const categoryMatches =
+                    selectedCategory === "all" ||
+                    category === selectedCategory;
+
+                const searchMatches =
+                    searchTerm === "" ||
+                    searchableText.includes(searchTerm);
+
+                if (categoryMatches && searchMatches) {
+
+                    card.style.display = "block";
+
+                    visibleCount++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+
+            if (visibleCount === 0) {
+
+                emptyMessage.style.display = "block";
+
+            } else {
+
+                emptyMessage.style.display = "none";
+
+            }
+
+        }
+
+
+        /*
+         * CATEGORY BUTTONS
+         */
+
+        filters.forEach(function(filter) {
+
+            filter.addEventListener("click", function() {
+
+                filters.forEach(function(button) {
+
+                    button.classList.remove("active");
+
+                });
+
+                this.classList.add("active");
+
+                selectedCategory =
+                    this.dataset.category;
+
+                filterAnnouncements();
+
+            });
+
+        });
+
+
+        /*
+         * SEARCH
+         */
+
+        searchButton.addEventListener(
+            "click",
+            filterAnnouncements
+        );
+
+
+        searchInput.addEventListener(
+            "input",
+            filterAnnouncements
+        );
+
+
+        /*
+         * ENTER KEY SEARCH
+         */
+
+        searchInput.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    event.preventDefault();
+
+                    filterAnnouncements();
+
+                }
+
+            }
+        );
+
+
+        /*
+         * ACKNOWLEDGE BUTTON
+         *
+         * Temporary frontend behavior.
+         * Actual database tracking will be
+         * implemented later.
+         */
+
+        document
+            .querySelectorAll(".acknowledge-btn")
+            .forEach(function(button) {
+
+                button.addEventListener(
+                    "click",
+                    function() {
+
+                        if (
+                            this.classList.contains(
+                                "acknowledged"
+                            )
+                        ) {
+
+                            this.classList.remove(
+                                "acknowledged"
+                            );
+
+                            this.innerHTML =
+                                "👍 Acknowledge";
+
+                        } else {
+
+                            this.classList.add(
+                                "acknowledged"
+                            );
+
+                            this.innerHTML =
+                                "✓ Acknowledged";
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+        /*
+         * COPY / SHARE BUTTON
+         */
+
+        document
+            .querySelectorAll(".share-btn")
+            .forEach(function(button) {
+
+                button.addEventListener(
+                    "click",
+                    async function() {
+
+                        const url =
+                            window.location.href;
+
+                        try {
+
+                            await navigator.clipboard.writeText(
+                                url
+                            );
+
+                            const originalText =
+                                this.innerHTML;
+
+                            this.innerHTML =
+                                "✓ Link Copied";
+
+                            setTimeout(
+                                () => {
+
+                                    this.innerHTML =
+                                        originalText;
+
+                                },
+                                1800
+                            );
+
+                        } catch (error) {
+
+                            alert(
+                                "Unable to copy the link. " +
+                                "Please copy the page URL manually."
+                            );
+
+                        }
+
+                    }
+                );
+
+            });
+
+    </script>
+
+</body>
+</html>
+

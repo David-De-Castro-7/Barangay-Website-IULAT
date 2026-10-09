@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Urgent Report | iUlat</title>
+
+    <link rel="stylesheet" href="../../../assets/css/global.css">
+    <link rel="stylesheet" href="../../../assets/css/landing.css">
+
+    <style>
+        /* =========================================
+           GUEST REPORT PAGE
+        ========================================= */
+
+        .guest-report-page {
+            background: #f5f9ff;
+            min-height: 100vh;
+        }
+
+        /* Page Header */
+        .report-page-header {
+            background: #0b5ed7;
+            padding: 70px 20px 65px;
+            color: #ffffff;
+        }
+
+        .report-page-header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .report-page-label {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            color: #dbeafe;
+        }
+
+        .report-page-header h1 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin: 0 0 18px;
+        }
+
+        .report-page-header p {
+            max-width: 700px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #e8f1ff;
+            margin: 0;
+        }
+
+        /* Main Content */
+        .guest-report-section {
+            padding: 60px 20px 80px;
+        }
+
+        .guest-report-container {
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        /* Emergency Notice */
+        .emergency-notice {
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            border-left: 5px solid #f97316;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 30px;
+        }
+
+        .emergency-notice h3 {
+            margin: 0 0 8px;
+            color: #c2410c;
+            font-size: 18px;
+        }
+
+        .emergency-notice p {
+            margin: 0;
+            color: #7c2d12;
+            line-height: 1.6;
+        }
+
+        .emergency-notice strong {
+            color: #9a3412;
+        }
+
+        /* Form Card */
+        .guest-form-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(15, 67, 122, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        .form-heading {
+            margin-bottom: 30px;
+        }
+
+        .form-heading h2 {
+            margin: 0 0 8px;
+            font-size: 27px;
+            color: #123b66;
+        }
+
+        .form-heading p {
+            margin: 0;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Form Layout */
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-bottom: 22px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-row .form-group {
+            margin-bottom: 0;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #1e3a5f;
+        }
+
+        .required {
+            color: #dc2626;
+        }
+
+        .optional {
+            color: #94a3b8;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #1e293b;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #0b5ed7;
+            box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.10);
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .field-help {
+            display: block;
+            margin-top: 6px;
+            color: #64748b;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        /* File Upload */
+        .file-upload {
+            border: 2px dashed #bfdbfe;
+            background: #f8fbff;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .file-upload:hover {
+            border-color: #0b5ed7;
+            background: #f0f7ff;
+        }
+
+        .file-upload-icon {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .file-upload strong {
+            display: block;
+            color: #1e3a5f;
+            margin-bottom: 5px;
+        }
+
+        .file-upload span {
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        .file-upload input {
+            display: none;
+        }
+
+        /* CAPTCHA */
+        .captcha-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 9px;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 330px;
+        }
+
+        .captcha-box input {
+            width: 20px;
+            height: 20px;
+            accent-color: #0b5ed7;
+        }
+
+        .captcha-box label {
+            margin: 0;
+            color: #334155;
+            font-size: 14px;
+        }
+
+        /* Submit */
+        .form-actions {
+            margin-top: 32px;
+            padding-top: 25px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .privacy-note {
+            color: #64748b;
+            font-size: 12px;
+            line-height: 1.5;
+            max-width: 500px;
+        }
+
+        .submit-report-btn {
+            border: none;
+            background: #0b5ed7;
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .submit-report-btn:hover {
+            background: #084db2;
+            transform: translateY(-1px);
+        }
+
+        /* Alternative */
+        .alternative-box {
+            margin-top: 25px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 10px;
+            padding: 20px 24px;
+            text-align: center;
+        }
+
+        .alternative-box p {
+            margin: 0 0 10px;
+            color: #334155;
+            font-size: 14px;
+        }
+
+        .alternative-box a {
+            color: #0b5ed7;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .alternative-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .guest-report-footer {
+            background: #0b5ed7;
+            color: #ffffff;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .guest-report-footer p {
+            margin: 0;
+            color: #dbeafe;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+
+            .report-page-header {
+                padding: 50px 20px;
+            }
+
+            .report-page-header h1 {
+                font-size: 32px;
+            }
+
+            .guest-report-section {
+                padding: 40px 15px 60px;
+            }
+
+            .guest-form-card {
+                padding: 25px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .form-row .form-group {
+                margin-bottom: 22px;
+            }
+
+            .form-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .submit-report-btn {
+                width: 100%;
+            }
+
+            .captcha-box {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="guest-report-page">
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="nav-container">
+
+                <a href="../../../index.html" class="logo">
+                    <span class="logo-icon">i</span>
+                    <span>Ulat</span>
+                </a>
+
+                <div class="nav-links">
+
+                    <a href="../../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                    <a href="../announcements.html" class="nav-link">
+                        Announcements
+                    </a>
+
+                    <a href="../reports.html" class="nav-link active">
+                        Reports
+                    </a>
+
+                    <a href="../services.html" class="nav-link">
+                        Services
+                    </a>
+
+                    <a href="../about.html" class="nav-link">
+                        About
+                    </a>
+
+                    <a href="../contact.html" class="nav-link">
+                        Contact
+                    </a>
+
+                </div>
+
+                <div class="nav-actions">
+
+                    <a href="../auth/resident-login.html" class="btn btn-outline">
+                        Sign In
+                    </a>
+
+                    <a href="../auth/resident-register.html" class="btn btn-primary">
+                        Register
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Page Header -->
+    <section class="report-page-header">
+
+        <div class="report-page-header-content">
+
+            <span class="report-page-label">
+                URGENT COMMUNITY REPORTING
+            </span>
+
+            <h1>
+                Report an Urgent Community Issue
+            </h1>
+
+            <p>
+                You can submit an urgent community concern without creating
+                an iUlat account. Provide the location and details of the
+                incident so authorized barangay personnel can review it.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="guest-report-section">
+
+        <div class="guest-report-container">
+
+
+            <!-- Emergency Notice -->
+            <div class="emergency-notice">
+
+                <h3>⚠️ For Life-Threatening Emergencies</h3>
+
+                <p>
+                    iUlat is intended for community reporting and barangay
+                    concerns. If there is an immediate threat to life,
+                    serious injury, fire, or another emergency requiring
+                    immediate response, please call <strong>911</strong>.
+                </p>
+
+            </div>
+
+
+            <!-- Report Form -->
+            <div class="guest-form-card">
+
+                <div class="form-heading">
+
+                    <h2>Urgent Report Form</h2>
+
+                    <p>
+                        Please provide accurate information. Fields marked
+                        with <span class="required">*</span> are required.
+                    </p>
+
+                </div>
+
+
+                <form id="guestReportForm">
+
+
+                    <!-- Category + Location -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="category">
+                                Incident Category
+                                <span class="required">*</span>
+                            </label>
+
+                            <select id="category" name="category" required>
+
+                                <option value="">
+                                    Select incident category
+                                </option>
+
+                                <option value="road-hazard">
+                                    Road / Traffic Hazard
+                                </option>
+
+                                <option value="accident">
+                                    Accident
+                                </option>
+
+                                <option value="fire-smoke">
+                                    Fire / Smoke
+                                </option>
+
+                                <option value="flooding">
+                                    Flooding
+                                </option>
+
+                                <option value="dangerous-infrastructure">
+                                    Dangerous Infrastructure
+                                </option>
+
+                                <option value="streetlight-utility">
+                                    Streetlight / Utility Issue
+                                </option>
+
+                                <option value="public-safety">
+                                    Public Safety Concern
+                                </option>
+
+                                <option value="other">
+                                    Other Urgent Concern
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="location">
+                                Location
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                placeholder="e.g. Main Road, Purok 3"
+                                required
+                            >
+
+                            <span class="field-help">
+                                Provide the street, purok, landmark, or
+                                other identifiable location.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <div class="form-group">
+
+                        <label for="description">
+                            Description
+                            <span class="optional">(Optional)</span>
+                        </label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            placeholder="Briefly describe what happened or what needs attention..."
+                        ></textarea>
+
+                        <span class="field-help">
+                            Include useful details such as what happened,
+                            when you noticed it, and any immediate hazards.
+                        </span>
+
+                    </div>
+
+
+                    <!-- Photo -->
+                    <div class="form-group">
+
+                        <label>
+                            Photo / Evidence
+                            <span class="optional">(Optional)</span>
+                        </label>
+
+                        <label class="file-upload">
+
+                            <input
+                                type="file"
+                                id="evidence"
+                                name="evidence"
+                                accept="image/*"
+                            >
+
+                            <div class="file-upload-icon">
+                                📷
+                            </div>
+
+                            <strong>
+                                Click to upload a photo
+                            </strong>
+
+                            <span>
+                                JPG, PNG, or other image files
+                            </span>
+
+                        </label>
+
+                        <span class="field-help">
+                            Do not upload sensitive personal information
+                            or images unrelated to the reported concern.
+                        </span>
+
+                    </div>
+
+
+                    <!-- Contact Information -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Contact Number
+                                <span class="optional">(Optional)</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="09XXXXXXXXX"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                                <span class="optional">(Optional)</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CAPTCHA Placeholder -->
+                    <div class="form-group">
+
+                        <label>
+                            Spam Protection
+                            <span class="required">*</span>
+                        </label>
+
+                        <div class="captcha-box">
+
+                            <input
+                                type="checkbox"
+                                id="captcha"
+                                name="captcha"
+                                required
+                            >
+
+                            <label for="captcha">
+                                I am not a robot
+                            </label>
+
+                        </div>
+
+                        <span class="field-help">
+                            This is currently a placeholder for the CAPTCHA
+                            service that will be connected during backend
+                            development.
+                        </span>
+
+                    </div>
+
+
+                    <!-- Actions -->
+                    <div class="form-actions">
+
+                        <div class="privacy-note">
+
+                            By submitting this report, you confirm that the
+                            information provided is accurate to the best of
+                            your knowledge. Contact information is optional.
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="submit-report-btn"
+                        >
+                            Submit Urgent Report
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- Resident Alternative -->
+            <div class="alternative-box">
+
+                <p>
+                    Need to submit a formal complaint or track an existing
+                    case?
+                </p>
+
+                <a href="../auth/resident-login.html">
+                    Sign in to your resident account →
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="guest-report-footer">
+
+        <p>
+            © 2026 iUlat — Barangay Community Announcements and
+            Real-Time Event Dissemination Platform
+        </p>
+
+    </footer>
+
+
+    <!-- Temporary Frontend Behavior -->
+    <script>
+
+        const guestReportForm =
+            document.getElementById("guestReportForm");
+
+        guestReportForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Your urgent report form is ready. " +
+                "Backend submission will be connected in the next stage."
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>

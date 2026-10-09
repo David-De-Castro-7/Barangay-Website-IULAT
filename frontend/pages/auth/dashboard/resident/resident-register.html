@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resident Registration | iUlat Barangay">
+    <meta name="theme-color" content="#0b2375">
+    <title>Resident Registration | iUlat</title>
+
+    <link rel="stylesheet" href="../../../../assets/css/global.css">
+    <link rel="stylesheet" href="../../../../assets/css/auth.css">
+
+
+<body class="auth-page register-page">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="auth-header">
+
+        <div class="auth-header-container">
+
+            <a
+                href="../../../index.html"
+                class="auth-brand"
+            >
+
+                <div class="auth-brand-logo">
+                    iU
+                </div>
+
+                <div class="auth-brand-text">
+
+                    <strong>
+                        iUlat
+                    </strong>
+
+                    <span>
+                        Barangay Information Portal
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="resident-login.html"
+                class="auth-back-link"
+            >
+                ← Back to Login
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         REGISTRATION
+         ===================================================== -->
+
+    <main class="register-main">
+
+        <div class="register-container">
+
+            <div class="register-card">
+
+
+                <!-- =================================================
+                     HEADER
+                     ================================================= -->
+
+                <div class="register-header">
+
+                    <div class="register-icon">
+                        iU
+                    </div>
+
+                    <span class="form-eyebrow">
+                        RESIDENT REGISTRATION
+                    </span>
+
+                    <h1>
+                        Create Resident Account
+                    </h1>
+
+                    <p>
+                        Register your account to stay connected with
+                        your barangay and access resident services.
+                    </p>
+
+
+                    <div class="approval-notice">
+
+                        <span class="approval-icon">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Account Verification
+                            </strong>
+
+                            <span>
+                                Your registration may require verification
+                                by authorized barangay personnel.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FORM
+                     ================================================= -->
+
+                <form
+                    id="residentRegisterForm"
+                    class="registration-form"
+                    novalidate
+                >
+
+
+                    <!-- =================================================
+                         1. PERSONAL INFORMATION
+                         ================================================= -->
+
+                    <section class="form-section">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">
+                                1
+                            </span>
+
+                            <div>
+
+                                <h2>
+                                    Personal Information
+                                </h2>
+
+                                <p>
+                                    Provide your basic personal information.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="firstName">
+                                    First Name <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    placeholder="Enter your first name"
+                                    autocomplete="given-name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="middleName">
+                                    Middle Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="middleName"
+                                    name="middleName"
+                                    placeholder="Enter your middle name"
+                                    autocomplete="additional-name"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lastName">
+                                    Last Name <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    placeholder="Enter your last name"
+                                    autocomplete="family-name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="birthdate">
+                                    Birthdate <span>*</span>
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="birthdate"
+                                    name="birthdate"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="age">
+                                    Age
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="age"
+                                    name="age"
+                                    placeholder="Automatically calculated"
+                                    readonly
+                                >
+
+                                <small class="field-note">
+                                    Automatically calculated from your birthdate.
+                                </small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="placeOfBirth">
+                                    Place of Birth
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="placeOfBirth"
+                                    name="placeOfBirth"
+                                    placeholder="City / Municipality, Province"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="gender">
+                                    Gender
+                                </label>
+
+                                <select
+                                    id="gender"
+                                    name="gender"
+                                >
+
+                                    <option value="">
+                                        Select gender
+                                    </option>
+
+                                    <option value="male">
+                                        Male
+                                    </option>
+
+                                    <option value="female">
+                                        Female
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+
+                                    <option value="prefer-not-to-say">
+                                        Prefer not to say
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="civilStatus">
+                                    Civil Status
+                                </label>
+
+                                <select
+                                    id="civilStatus"
+                                    name="civilStatus"
+                                >
+
+                                    <option value="">
+                                        Select civil status
+                                    </option>
+
+                                    <option value="single">
+                                        Single
+                                    </option>
+
+                                    <option value="married">
+                                        Married
+                                    </option>
+
+                                    <option value="widowed">
+                                        Widowed
+                                    </option>
+
+                                    <option value="separated">
+                                        Separated
+                                    </option>
+
+                                    <option value="divorced">
+                                        Divorced
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="nationality">
+                                    Nationality
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nationality"
+                                    name="nationality"
+                                    value="Filipino"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         2. ADDRESS
+                         ================================================= -->
+
+                    <section class="form-section">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">
+                                2
+                            </span>
+
+                            <div>
+
+                                <h2>
+                                    Address & Residency
+                                </h2>
+
+                                <p>
+                                    Tell us where you currently reside.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group full-width">
+
+                                <label for="completeAddress">
+                                    Complete Address <span>*</span>
+                                </label>
+
+                                <textarea
+                                    id="completeAddress"
+                                    name="completeAddress"
+                                    rows="3"
+                                    placeholder="House/Unit No., Street, Barangay, Municipality/City, Province"
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="yearsOfResidency">
+                                    Years of Residency
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="yearsOfResidency"
+                                    name="yearsOfResidency"
+                                    min="0"
+                                    placeholder="e.g. 5"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         3. CONTACT
+                         ================================================= -->
+
+                    <section class="form-section">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">
+                                3
+                            </span>
+
+                            <div>
+
+                                <h2>
+                                    Contact Information
+                                </h2>
+
+                                <p>
+                                    Provide your current contact details.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="mobileNumber">
+                                    Mobile Number <span>*</span>
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="mobileNumber"
+                                    name="mobileNumber"
+                                    placeholder="09XXXXXXXXX"
+                                    maxlength="11"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="emailAddress">
+                                    Email Address <span>*</span>
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="emailAddress"
+                                    name="emailAddress"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         4. HOUSEHOLD
+                         ================================================= -->
+
+                    <section class="form-section">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">
+                                4
+                            </span>
+
+                            <div>
+
+                                <h2>
+                                    Resident & Household Information
+                                </h2>
+
+                                <p>
+                                    Provide basic household information.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="voterStatus">
+                                    Voter Status
+                                </label>
+
+                                <select
+                                    id="voterStatus"
+                                    name="voterStatus"
+                                >
+
+                                    <option value="">
+                                        Select status
+                                    </option>
+
+                                    <option value="registered">
+                                        Registered Voter
+                                    </option>
+
+                                    <option value="not-registered">
+                                        Not Registered
+                                    </option>
+
+                                    <option value="not-applicable">
+                                        Not Applicable
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="householdHead">
+                                    Household Head?
+                                </label>
+
+                                <select
+                                    id="householdHead"
+                                    name="householdHead"
+                                >
+
+                                    <option value="">
+                                        Select option
+                                    </option>
+
+                                    <option value="yes">
+                                        Yes
+                                    </option>
+
+                                    <option value="no">
+                                        No
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="familyMembers">
+                                    Number of Family Members
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="familyMembers"
+                                    name="familyMembers"
+                                    min="1"
+                                    placeholder="e.g. 4"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         5. ADDITIONAL INFORMATION
+                         ================================================= -->
+
+                    <section class="form-section">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">
+                                5
+                            </span>
+
+                            <div>
+
+                                <h2>
+                                    Additional Information
+                                </h2>
+
+                                <p>
+                                    Optional information that may help
+                                    during emergencies or community services.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="emergencyContactName">
+                                    Emergency Contact Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="emergencyContactName"
+                                    name="emergencyContactName"
+                                    placeholder="Full name"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="emergencyContactNumber">
+                                    Emergency Contact Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="emergencyContactNumber"
+                                    name="emergencyContactNumber"
+                                    placeholder="09XXXXXXXXX"
+                                    maxlength="11"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="emergencyRelationship">
+                                    Relationship to Resident
+                                </label>
+
+                                <select
+                                    id="emergencyRelationship"
+                                    name="emergencyRelationship"
+                                >
+
+                                    <option value="">
+                                        Select relationship
+                                    </option>
+
+                                    <option value="parent">
+                                        Parent
+                                    </option>
+
+                                    <option value="spouse">
+                                        Spouse
+                                    </option>
+
+                                    <option value="sibling">
+                                        Sibling
+                                    </option>
+
+                                    <option value="child">
+                                        Child
+                                    </option>
+
+                                    <option value="relative">
+                                        Relative
+                                    </option>
+
+                                    <option value="guardian">
+                                        Guardian
+                                    </option>
+
+                                    <option value="friend">
+                                        Friend
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group full-width">
+
+                                <label for="disability">
+                                    Disability / Special Needs
+                                </label>
+
+                                <textarea
+                                    id="disability"
+                                    name="disability"
+                                    rows="3"
+                                    placeholder="If applicable, describe any disability or special needs."
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         6. VERIFICATION
+                         ================================================= -->
+
+                    <section class="form-section">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">
+                                6
+                            </span>
+
+                            <div>
+
+                                <h2>
+                                    Verification & Profile
+                                </h2>
+
+                                <p>
+                                    Select the ID you will use for verification
+                                    and upload a clear copy of it.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="validIdType">
+                                    Valid ID Type <span>*</span>
+                                </label>
+
+                                <select
+                                    id="validIdType"
+                                    name="validIdType"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select valid ID
+                                    </option>
+
+                                    <option value="national-id">
+                                        Philippine National ID (PhilSys ID)
+                                    </option>
+
+                                    <option value="drivers-license">
+                                        Driver's License
+                                    </option>
+
+                                    <option value="passport">
+                                        Passport
+                                    </option>
+
+                                    <option value="umid">
+                                        UMID
+                                    </option>
+
+                                    <option value="sss">
+                                        SSS ID
+                                    </option>
+
+                                    <option value="gsis">
+                                        GSIS eCard
+                                    </option>
+
+                                    <option value="postal-id">
+                                        Postal ID
+                                    </option>
+
+                                    <option value="prc">
+                                        PRC ID
+                                    </option>
+
+                                    <option value="philhealth">
+                                        PhilHealth ID
+                                    </option>
+
+                                    <option value="senior-citizen">
+                                        Senior Citizen ID
+                                    </option>
+
+                                    <option value="pwd">
+                                        PWD ID
+                                    </option>
+
+                                    <option value="voters">
+                                        Voter's Certificate / Voter's ID
+                                    </option>
+
+                                    <option value="barangay-id">
+                                        Barangay ID
+                                    </option>
+
+                                    <option value="other">
+                                        Other Government-Issued ID
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="validId">
+                                    Upload Valid ID <span>*</span>
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="validId"
+                                    name="validId"
+                                    accept="image/*,.pdf"
+                                    required
+                                >
+
+                                <small class="field-note">
+                                    Upload a clear photo, scan, or PDF.
+                                </small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="profileImage">
+                                    Profile Image
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="profileImage"
+                                    name="profileImage"
+                                    accept="image/*"
+                                >
+
+                                <small class="field-note">
+                                    Optional. JPG or PNG recommended.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         7. SECURITY
+                         ================================================= -->
+
+                    <section class="form-section">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">
+                                7
+                            </span>
+
+                            <div>
+
+                                <h2>
+                                    Account Security
+                                </h2>
+
+                                <p>
+                                    Create the password you will use to sign in.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="password">
+                                    Password <span>*</span>
+                                </label>
+
+                                <div class="password-wrapper">
+
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Create a password"
+                                        autocomplete="new-password"
+                                        minlength="8"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="password"
+                                    >
+                                        Show
+                                    </button>
+
+                                </div>
+
+                                <small class="field-note">
+                                    Use at least 8 characters.
+                                </small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="confirmPassword">
+                                    Confirm Password <span>*</span>
+                                </label>
+
+                                <div class="password-wrapper">
+
+                                    <input
+                                        type="password"
+                                        id="confirmPassword"
+                                        name="confirmPassword"
+                                        placeholder="Re-enter your password"
+                                        autocomplete="new-password"
+                                        minlength="8"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="confirmPassword"
+                                    >
+                                        Show
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="passwordError"
+                            class="form-error"
+                            role="alert"
+                        ></div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         8. AGREEMENT
+                         ================================================= -->
+
+                    <section class="agreement-section">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required
+                            >
+
+                            <span>
+
+                                I agree to the
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                                and
+                                <a href="#">
+                                    Privacy Policy
+                                </a>
+                                of iUlat.
+
+                            </span>
+
+                        </label>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         ACTIONS
+                         ================================================= -->
+
+                    <div class="register-actions">
+
+                        <button
+                            type="submit"
+                            class="auth-submit"
+                        >
+                            Create Resident Account
+                        </button>
+
+
+                        <p class="login-prompt">
+
+                            Already have an account?
+
+                            <a href="resident-login.html">
+                                Sign In
+                            </a>
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         SUCCESS
+                         ================================================= -->
+
+                    <div
+                        id="registrationSuccess"
+                        class="registration-success"
+                        role="status"
+                        aria-live="polite"
+                    >
+
+                        <strong>
+                            Registration Submitted
+                        </strong>
+
+                        <p>
+                            Your resident registration has been submitted
+                            for verification.
+                        </p>
+
+                        <a href="resident-login.html">
+                            Continue to Resident Login
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="auth-footer">
+
+        <p>
+            © 2026 iUlat. All rights reserved.
+        </p>
+
+        <span>
+            Barangay Community Information Platform
+        </span>
+
+    </footer>
+
+
+    <script src="../../assets/js/auth.js"></script>
+
+</body>
+
+</html>
