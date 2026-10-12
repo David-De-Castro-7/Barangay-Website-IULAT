@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore barangay services on iUlat.">
+  <title>Barangay Services | iUlat</title>
+
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="../assets/css/landing.css">
+
+</head>
+<body>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+
+                <!-- BRAND -->
+
+                <a
+                    href="index.html"
+                    class="brand"
+                >
+
+                    <div class="brand-logo">
+                        iU
+                    </div>
+
+                    <div class="brand-text">
+
+                        <span class="brand-name">
+                            iUlat
+                        </span>
+
+                        <span class="brand-subtitle">
+                            Barangay Information Portal
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- NAVIGATION -->
+
+                <div
+        class="nav-links"
+        id="navLinks"
+        >
+
+        <a
+         href="../../../index.html"
+        class="nav-link"
+        >
+        Home
+        </a>
+
+        <a
+        href="../pages/announcements.html"
+        class="nav-link"
+        >
+        Announcements
+        </a>
+
+        <a
+        href="../pages/reports.html"
+        class="nav-link"
+         >
+        Report an Issue
+        </a>
+
+        <a          
+        href="frontend/pages/services.html"
+        class="nav-link active"
+        >
+        Services
+        </a>
+
+        <a
+        href="../pages/about.html"
+        class="nav-link"
+        >
+        About
+        </a>
+
+        <a
+        href="../pages/contact.html"
+        class="nav-link"
+        >
+        Contact
+        </a>
+
+       </div>
+
+                <!-- AUTH BUTTONS -->
+
+                <div
+                    class="nav-actions"
+                    id="navActions"
+                >
+
+                    <a
+                        href="frontend/pages/auth/resident-login.html"
+                        class="btn btn-outline btn-sm"
+                    >
+                        Sign In
+                    </a>
+
+                    <a
+                        href="frontend/pages/auth/resident-register.html"
+                        class="btn btn-primary btn-sm"
+                    >
+                        Register
+                    </a>
+
+                </div>
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+  <main>
+  
+<!-- =================================================
+             PAGE HERO
+             ================================================= -->
+
+        <section class="announcement-page-hero">
+
+            <div class="container">
+
+                <div class="page-hero-content">
+
+                    <span class="hero-label">
+                      BARANGAY SERVICES
+                    </span>
+
+                    <h1>
+                        Access Barangay Services
+                    </h1>
+
+                    <p>
+                        Explore barangay services, learn about application requirements, and find the information you need to access local government assistance and community programs.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+    <section class="section services-section" id="service-directory">
+      <div class="container">
+        
+
+        <div class="services-grid" id="services-grid">
+
+          <article class="card service-card"
+            data-category="certificate"
+            data-search="barangay clearance employment school valid id">
+            <div class="service-icon">▤</div>
+            <span class="service-category">CERTIFICATE</span>
+            <h3>Barangay Clearance</h3>
+            <p>
+              General information about requesting a barangay clearance
+              for employment, school, or other transactions.
+            </p>
+            <button class="service-details" data-service="clearance" type="button">
+              View requirements <span>→</span>
+            </button>
+          </article>
+
+          <article class="card service-card"
+            data-category="certificate"
+            data-search="certificate residency proof address resident">
+            <div class="service-icon">⌂</div>
+            <span class="service-category">CERTIFICATE</span>
+            <h3>Certificate of Residency</h3>
+            <p>
+              Learn about requesting a document that confirms residence
+              within the barangay.
+            </p>
+            <button class="service-details" data-service="residency" type="button">
+              View requirements <span>→</span>
+            </button>
+          </article>
+
+          <article class="card service-card"
+            data-category="certificate"
+            data-search="certificate indigency financial assistance">
+            <div class="service-icon">♡</div>
+            <span class="service-category">CERTIFICATE</span>
+            <h3>Certificate of Indigency</h3>
+            <p>
+              Information about a certificate that may be requested
+              for qualifying assistance programs.
+            </p>
+            <button class="service-details" data-service="indigency" type="button">
+              View requirements <span>→</span>
+            </button>
+          </article>
+
+          <article class="card service-card"
+            data-category="clearance"
+            data-search="business clearance business permit renewal">
+            <div class="service-icon">▦</div>
+            <span class="service-category">CLEARANCE</span>
+            <h3>Barangay Business Clearance</h3>
+            <p>
+              General guidance for business owners who need barangay-level
+              clearance for a business-related transaction.
+            </p>
+            <button class="service-details" data-service="business" type="button">
+              View requirements <span>→</span>
+            </button>
+          </article>
+
+          <article class="card service-card"
+            data-category="community"
+            data-search="community assistance referrals local programs">
+            <div class="service-icon">♧</div>
+            <span class="service-category">COMMUNITY</span>
+            <h3>Community Assistance</h3>
+            <p>
+              Ask about local programs, community support, and referrals
+              that may be available to residents.
+            </p>
+            <button class="service-details" data-service="assistance" type="button">
+              View details <span>→</span>
+            </button>
+          </article>
+
+          <article class="card service-card"
+            data-category="community"
+            data-search="general document request inquiry forms">
+            <div class="service-icon">✉</div>
+            <span class="service-category">GENERAL INQUIRY</span>
+            <h3>Other Document Requests</h3>
+            <p>
+              Find out how to inquire about other documents or services
+              offered by your barangay.
+            </p>
+            <button class="service-details" data-service="other" type="button">
+              View details <span>→</span>
+            </button>
+          </article>
+
+        </div>
+
+        <div id="no-results" class="no-results" hidden>
+          <h3>No services found</h3>
+          <p>Try a different search term or category.</p>
+          <button type="button" class="btn btn-outline" id="reset-filters">
+            Reset filters
+          </button>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <section class="services-process">
+      <div class="container process-layout">
+        <div>
+          <span class="services-label">BEFORE YOU VISIT</span>
+          <h2>Prepare for your barangay visit.</h2>
+          <p>Follow these simple steps before requesting a service.</p>
+        </div>
+
+        <div class="process-list">
+          <div class="process-item">
+            <span>01</span>
+            <div>
+              <h3>Identify your needs</h3>
+              <p>Determine which document or service you need.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <span>02</span>
+            <div>
+              <h3>Confirm requirements</h3>
+              <p>Ask which identification and supporting documents to bring.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <span>03</span>
+            <div>
+              <h3>Verify office details</h3>
+              <p>Confirm office hours, fees, and processing times directly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container services-contact">
+        <div>
+          <h2>Have questions about a service?</h2>
+          <p>Contact the barangay office for guidance and current requirements.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Contact Us →</a>
+      </div>
+    </section>
+  </main>
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="brand"
+                    >
+
+                        <div class="brand-logo">
+                            i
+                        </div>
+
+                        <div class="brand-text">
+
+                            <span class="brand-name">
+                                iUlat
+                            </span>
+
+                            <span class="brand-subtitle">
+                                Barangay Information Portal
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <p>
+                        Connecting barangay officials and residents
+                        through reliable, accessible, and verified
+                        community information.
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="frontend/pages/announcements.html">
+                        Announcements
+                    </a>
+
+                    <a href="frontend/pages/reports.html">
+                        Report an Issue
+                    </a>
+
+                    <a href="frontend/pages/about.html">
+                        About iUlat
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Residents
+                    </h3>
+
+                    <a href="frontend/pages/auth/resident-login.html">
+                        Resident Login
+                    </a>
+
+                    <a href="frontend/pages/auth/resident-register.html">
+                        Register
+                    </a>
+
+                    <a href="frontend/pages/reports.html">
+                        Submit a Report
+                    </a>
+
+                    <a href="frontend/pages/contact.html">
+                        Contact Us
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Officials
+                    </h3>
+
+                    <a href="frontend/pages/auth/official-login.html">
+                        Official Login
+                    </a>
+
+                    <a href="frontend/pages/auth/official-register.html">
+                        Official Registration
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 iUlat. All rights reserved.
+                </p>
+
+                <p>
+                    Barangay Community Information Platform
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+  <dialog id="service-dialog" class="service-dialog">
+    <div class="dialog-top">
+      <span class="service-icon">✓</span>
+      <button type="button" class="dialog-close" aria-label="Close dialog">×</button>
+    </div>
+    <h2 id="dialog-title">Service details</h2>
+    <p id="dialog-description"></p>
+    <h3>Before you apply</h3>
+    <ul id="dialog-requirements"></ul>
+    <p class="dialog-note">
+      This is general guidance, not an official requirements list.
+      Please confirm current details with your barangay office.
+    </p>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-outline dialog-close">Close</button>
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    </div>
+  </dialog>
+
+  <script src="assets/js/services.js"></script>
+</body>
+</html>

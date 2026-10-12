@@ -3352,6 +3352,268 @@
 
 
 
+
+/* =========================================================
+   SERVICES PAGE — POLISHED LAYOUT
+   ========================================================= */
+
+   
+.services-section {
+    padding: 85px 0;
+    background: #ffffff;
+}
+
+.services-section .section-heading {
+    max-width: 720px;
+    margin-bottom: 35px;
+}
+
+.services-section .section-heading h2 {
+    margin: 14px 0;
+    color: #111827;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.services-section .section-heading p {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Search field */
+
+.services-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 35px;
+}
+
+.services-search {
+    flex: 1 1 280px;
+}
+
+.services-search input {
+    width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+    padding: 13px 16px;
+    border: 1px solid #dce1e8;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #1f2937;
+    font: inherit;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.services-search input:focus {
+    outline: none;
+    border-color: #1745b5;
+    box-shadow: 0 0 0 3px rgba(23, 69, 181, 0.1);
+}
+
+/* Category filters */
+
+.services-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.services-filters button {
+    min-height: 44px;
+    padding: 10px 16px;
+    border: 1px solid #e5e9f0;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #475569;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.services-filters button:hover,
+.services-filters button.active {
+    border-color: #1745b5;
+    background: #1745b5;
+    color: #ffffff;
+}
+
+/* Consistent service card grid */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 30px;
+    border: 1px solid #e7eaf0;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 28px rgba(17, 24, 39, 0.05);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: #d4def5;
+    box-shadow: 0 16px 38px rgba(17, 24, 39, 0.09);
+}
+
+.service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    background: #edf2ff;
+    color: #1745b5;
+    font-size: 1.3rem;
+}
+
+.service-card h3 {
+    margin: 0 0 12px;
+    color: #111827;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.service-card p {
+    margin: 0 0 22px;
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+.service-card .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Process section */
+
+.services-process {
+    padding: 85px 0;
+    background: #f7f9fc;
+}
+
+.services-process h2 {
+    color: #111827;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+.services-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.process-card {
+    padding: 28px;
+    border: 1px solid #e5e9f0;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(17, 24, 39, 0.04);
+}
+
+.process-card h3 {
+    margin: 0 0 12px;
+    color: #111827;
+}
+
+.process-card p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.75;
+}
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+    .services-grid,
+    .services-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .services-section,
+    .services-process {
+        padding: 60px 0;
+    }
+
+    .services-grid,
+    .services-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card,
+    .process-card {
+        padding: 25px;
+    }
+
+    .services-controls {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================================
    INNER PAGES
    ABOUT + CONTACT

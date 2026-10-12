@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Official Login | iUlat</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/auth.css">
+  <script src="../../assets/js/auth.js" defer></script>
+</head>
+<body class="auth-page official-auth">
+<header class="auth-header">
+  <a class="auth-brand" href="../../../index.html"><span class="brand-logo">i</span><span><b>iUlat</b><small>BARANGAY COMMUNITY PORTAL</small></span></a>
+  <a class="back-link" href="../../../index.html">← Back to Home</a>
+</header>
+<main class="auth-layout">
+  <aside class="auth-visual official-visual">
+    <span class="eyebrow">AUTHORIZED PERSONNEL ONLY</span>
+    <h1>Serve your<br><span>community better.</span></h1>
+    <p>Access official tools for managing announcements, responding to reports, and sharing verified barangay information.</p>
+    <div class="visual-callout"><b>✓</b><div><strong>Restricted access</strong><small>Only approved barangay personnel should sign in to this portal.</small></div></div>
+    <i class="orb orb-one"></i><i class="orb orb-two"></i>
+  </aside>
+  <section class="auth-panel"><div class="auth-card">
+    <div class="mobile-brand"><span class="brand-logo">i</span><b>iUlat</b></div>
+    <span class="form-kicker official-kicker">BARANGAY OFFICIALS</span><h2>Official sign in</h2><p class="auth-intro">Use your approved official account credentials.</p>
+    <div class="notice-box"><b>i</b><p>Resident accounts cannot access the official dashboard.</p></div>
+    <form class="auth-form" data-auth-form="official-login" novalidate>
+      <div class="form-group"><label for="email">Official email address</label><input class="form-control" id="email" name="email" type="email" autocomplete="username" required placeholder="official@barangay.gov.ph"><small class="field-error"></small></div>
+      <div class="form-group"><div class="label-row"><label for="password">Password</label><a href="#" class="text-link" data-demo-link="Contact your system administrator for official account recovery.">Need help?</a></div><div class="password-wrap"><input class="form-control" id="password" name="password" type="password" autocomplete="current-password" minlength="8" required placeholder="Enter your password"><button type="button" class="password-toggle" data-toggle-password="password">Show</button></div><small class="field-error"></small></div>
+      <label class="check-label"><input type="checkbox" name="confirmOfficialUse" required><span>I am an authorized barangay official.</span></label><small class="field-error terms-error" data-official-check-error></small>
+      <button class="auth-submit" type="submit">Sign in to official portal </button><p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+    
+    <p class="privacy-note">🔒 Use official access only on trusted devices.</p>
+  </div></section>
+</main>
+<footer class="auth-footer"><span>© <span data-current-year></span> iUlat Barangay Community Portal</span><span>Official access is subject to approval.</span></footer>
+</body></html>

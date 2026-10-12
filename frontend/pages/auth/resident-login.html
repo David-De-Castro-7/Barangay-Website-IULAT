@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resident Login | iUlat</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/auth.css">
+  <script src="../../assets/js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+<header class="auth-header">
+  <a class="auth-brand" href="../../../index.html"><span class="brand-logo">iU</span><span><b>iUlat</b><small>BARANGAY COMMUNITY PLATFORM</small></span></a>
+  <a class="back-link" href="../../../index.html">← Back to Home</a>
+</header>
+<main class="auth-layout">
+  <aside class="auth-visual resident-visual">
+    <span class="eyebrow">YOUR BARANGAY, CONNECTED</span>
+    <h1>Stay informed.<br><span>Stay connected.</span></h1>
+    <p>Access barangay announcements, follow community updates, and find local services through one convenient portal.</p>
+    <div class="visual-benefit"><span>✓</span><div><b>Timely announcements</b><small>Important updates from your barangay</small></div></div>
+    <div class="visual-benefit"><span>✓</span><div><b>Community information</b><small>Services, notices, and local programs</small></div></div>
+    <i class="orb orb-one"></i><i class="orb orb-two"></i>
+  </aside>
+  <section class="auth-panel">
+    <div class="auth-card">
+      <div class="mobile-brand"><span class="brand-logo">iU</span><b>iUlat</b></div>
+      <span class="form-kicker">RESIDENT PORTAL</span>
+      <h2>Welcome back</h2><p class="auth-intro">Sign in to continue to your resident account.</p>
+      <form class="auth-form" data-auth-form="resident-login" novalidate>
+        <div class="form-group"><label for="email">Email address</label><input class="form-control" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><small class="field-error"></small></div>
+        <div class="form-group"><div class="label-row"><label for="password">Password</label><a href="#" class="text-link" data-demo-link="Password recovery will be connected when the backend is implemented.">Forgot password?</a></div>
+          <div class="password-wrap"><input class="form-control" id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" minlength="8" required><button type="button" class="password-toggle" data-toggle-password="password" aria-label="Show password">Show</button></div><small class="field-error"></small>
+        </div>
+        <label class="check-label"><input type="checkbox" name="remember"> Remember me on this device</label>
+        <button class="auth-submit" type="submit">Sign in </button><p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="auth-switch">New to iUlat? <a href="resident-register.html">Create a resident account</a></p>
+      <p class="privacy-note">🔒 Keep your account credentials private.</p>
+    </div>
+  </section>
+</main>
+<footer class="auth-footer"><span>© <span data-current-year></span> iUlat Barangay Community Portal</span><span>Built for a more connected community.</span></footer>
+</body></html>
