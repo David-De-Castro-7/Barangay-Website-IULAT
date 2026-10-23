@@ -1,87 +1,508 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Create Resident Account | iUlat</title>
-  <link rel="stylesheet" href="../../assets/css/global.css">
-  <link rel="stylesheet" href="../../assets/css/auth.css">
-  <script src="../../assets/js/auth.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Create Resident Account | iUlat</title>
+
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/auth.css">
+
+    <script src="../../assets/js/auth.js" defer></script>
 </head>
+
 <body class="auth-page resident-register-page">
+
 <header class="register-topbar">
-  <a class="register-top-brand" href="../../../index.html" aria-label="iUlat home"><span class="register-top-mark">iU</span><span><strong>iUlat</strong><small>Barangay Community Portal</small></span></a>
-  <a class="register-back-login" href="resident-login.html"><span aria-hidden="true">←</span> Back to Login</a>
+    <a class="register-top-brand"
+       href="../../../index.html"
+       aria-label="iUlat home">
+        <span class="register-top-mark">iU</span>
+        <span>
+            <strong>iUlat</strong>
+            <small>Barangay Community Portal</small>
+        </span>
+    </a>
+
+    <a class="register-back-login" href="resident-login.html">
+        <span aria-hidden="true">←</span>
+        Back to Login
+    </a>
 </header>
+
 <main class="resident-register-shell">
-  <header class="register-heading">
-    <a class="register-mark" href="../../../index.html" aria-label="iUlat home">iU</a>
-    <h1>Create Resident Account</h1>
-    <p>Register your account to stay connected with your barangay and access resident services.</p>
-    <div class="register-notice"><strong>Account Verification</strong><span>Your registration may require verification by authorized barangay personnel.</span></div>
-  </header>
-  <form class="resident-registration-form" data-auth-form="resident-register" novalidate>
-    <section class="register-section">
-      <div class="section-heading"><span>1</span><div><h2>Personal Information</h2><p>Provide your basic personal information.</p></div></div>
-      <div class="register-grid">
-        <div class="form-group"><label for="firstName">First Name <b>*</b></label><input class="form-control" id="firstName" name="firstName" autocomplete="given-name" required placeholder="Enter your first name"><small class="field-error"></small></div>
-        <div class="form-group"><label for="middleName">Middle Name</label><input class="form-control" id="middleName" name="middleName" autocomplete="additional-name" placeholder="Enter your middle name"></div>
-        <div class="form-group"><label for="lastName">Last Name <b>*</b></label><input class="form-control" id="lastName" name="lastName" autocomplete="family-name" required placeholder="Enter your last name"><small class="field-error"></small></div>
-        <div class="form-group"><label for="birthDate">Birthdate <b>*</b></label><input class="form-control" id="birthDate" name="birthDate" type="date" autocomplete="bday" required><small class="field-error"></small></div>
-        <div class="form-group"><label for="age">Age</label><input class="form-control" id="age" name="age" readonly placeholder="Automatically calculated"><small class="field-hint">Automatically calculated from your birthdate.</small></div>
-        <div class="form-group"><label for="placeOfBirth">Place of Birth</label><input class="form-control" id="placeOfBirth" name="placeOfBirth" placeholder="City / Municipality, Province"></div>
-        <div class="form-group"><label for="gender">Gender</label><select class="form-control" id="gender" name="gender"><option value="">Select gender</option><option>Female</option><option>Male</option><option>Prefer not to say</option><option>Other</option></select></div>
-        <div class="form-group"><label for="civilStatus">Civil Status</label><select class="form-control" id="civilStatus" name="civilStatus"><option value="">Select civil status</option><option>Single</option><option>Married</option><option>Widowed</option><option>Separated</option><option>Divorced</option></select></div>
-        <div class="form-group"><label for="nationality">Nationality</label><input class="form-control" id="nationality" name="nationality" value="Filipino"></div>
-      </div>
-    </section>
-    <section class="register-section">
-      <div class="section-heading"><span>2</span><div><h2>Address &amp; Residency</h2><p>Tell us where you currently reside.</p></div></div>
-      <div class="register-grid">
-        <div class="form-group register-full"><label for="address">Complete Address <b>*</b></label><textarea class="form-control" id="address" name="address" autocomplete="street-address" required placeholder="House/Unit No., Street, Barangay, Municipality/City, Province" rows="3"></textarea><small class="field-error"></small></div>
-        <div class="form-group"><label for="yearsResidency">Years of Residency</label><input class="form-control" id="yearsResidency" name="yearsResidency" type="number" min="0" max="120" placeholder="e.g. 5"><small class="field-error"></small></div>
-      </div>
-    </section>
-    <section class="register-section">
-      <div class="section-heading"><span>3</span><div><h2>Contact Information</h2><p>Provide your current contact details.</p></div></div>
-      <div class="register-grid">
-        <div class="form-group"><label for="phone">Mobile Number <b>*</b></label><input class="form-control" id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="09XXXXXXXXX"><small class="field-error"></small></div>
-        <div class="form-group"><label for="email">Email Address <b>*</b></label><input class="form-control" id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><small class="field-error"></small></div>
-      </div>
-    </section>
-    <section class="register-section">
-      <div class="section-heading"><span>4</span><div><h2>Resident &amp; Household Information</h2><p>Provide basic household information.</p></div></div>
-      <div class="register-grid">
-        <div class="form-group"><label for="voterStatus">Voter Status</label><select class="form-control" id="voterStatus" name="voterStatus"><option value="">Select status</option><option>Registered voter in this barangay</option><option>Registered voter in another barangay</option><option>Not registered</option><option>Not eligible</option></select></div>
-        <div class="form-group"><label for="householdHead">Household Head?</label><select class="form-control" id="householdHead" name="householdHead"><option value="">Select option</option><option value="yes">Yes</option><option value="no">No</option></select></div>
-        <div class="form-group"><label for="familyMembers">Number of Family Members</label><input class="form-control" id="familyMembers" name="familyMembers" type="number" min="1" max="100" placeholder="e.g. 4"><small class="field-error"></small></div>
-      </div>
-    </section>
-    <section class="register-section">
-      <div class="section-heading"><span>5</span><div><h2>Additional Information</h2><p>Optional information that may help during emergencies or community services.</p></div></div>
-      <div class="register-grid">
-        <div class="form-group"><label for="emergencyName">Emergency Contact Name</label><input class="form-control" id="emergencyName" name="emergencyName" placeholder="Full name"></div>
-        <div class="form-group"><label for="emergencyPhone">Emergency Contact Number</label><input class="form-control" id="emergencyPhone" name="emergencyPhone" type="tel" placeholder="09XXXXXXXXX"></div>
-        <div class="form-group"><label for="emergencyRelationship">Relationship to Resident</label><select class="form-control" id="emergencyRelationship" name="emergencyRelationship"><option value="">Select relationship</option><option>Parent</option><option>Spouse</option><option>Child</option><option>Sibling</option><option>Relative</option><option>Friend</option><option>Other</option></select></div>
-        <div class="form-group register-full"><label for="specialNeeds">Disability / Special Needs</label><textarea class="form-control" id="specialNeeds" name="specialNeeds" rows="3" placeholder="If applicable, describe any disability or special needs."></textarea></div>
-      </div>
-    </section>
-    <section class="register-section">
-      <div class="section-heading"><span>6</span><div><h2>Verification &amp; Profile</h2><p>Select the ID you will use for verification and upload a clear copy of it.</p></div></div>
-      <div class="register-grid">
-        <div class="form-group"><label for="validIdType">Valid ID Type <b>*</b></label><select class="form-control" id="validIdType" name="validIdType" required><option value="">Select valid ID</option><option>Philippine National ID</option><option>Passport</option><option>Driver's License</option><option>Voter's ID / Voter Certification</option><option>UMID</option><option>PhilHealth ID</option><option>Postal ID</option><option>Senior Citizen ID</option><option>PWD ID</option><option>Other government-issued ID</option></select><small class="field-hint">Select the government-issued ID you will use for verification.</small><small class="field-error"></small></div>
-        <div class="form-group"><label for="validIdFile">Upload Valid ID <b>*</b></label><input class="form-control file-control" id="validIdFile" name="validIdFile" type="file" accept="image/*,.pdf" required><small class="field-hint">Upload a clear photo, scan, or PDF of your selected ID.</small><small class="field-error"></small></div>
-        <div class="form-group"><label for="profileImage">Profile Image</label><input class="form-control file-control" id="profileImage" name="profileImage" type="file" accept="image/png,image/jpeg"><small class="field-hint">Optional. JPG or PNG recommended.</small><small class="field-error"></small></div>
-      </div>
-    </section>
-    <section class="register-section">
-      <div class="section-heading"><span>7</span><div><h2>Account Security</h2><p>Create the password you will use to sign in.</p></div></div>
-      <div class="register-grid">
-        <div class="form-group"><label for="password">Password <b>*</b></label><div class="password-wrap"><input class="form-control" id="password" name="password" type="password" autocomplete="new-password" minlength="8" required placeholder="Create a password"><button type="button" class="password-toggle" data-toggle-password="password" aria-label="Show password">Show</button></div><small class="field-hint">Use at least 8 characters.</small><small class="field-error"></small></div>
-        <div class="form-group"><label for="confirmPassword">Confirm Password <b>*</b></label><div class="password-wrap"><input class="form-control" id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required placeholder="Re-enter your password"><button type="button" class="password-toggle" data-toggle-password="confirmPassword" aria-label="Show password">Show</button></div><small class="field-error"></small></div>
-      </div>
-    </section>
-    <div class="register-terms"><label class="check-label"><input type="checkbox" name="agreeTerms" required><span>I agree to the <a href="#" class="text-link" data-demo-link="Add the final Terms & Conditions page before launch.">Terms &amp; Conditions</a> and <a href="#" class="text-link" data-demo-link="Add the final Privacy Policy page before launch.">Privacy Policy</a> of iUlat.</span></label><small class="field-error terms-error" data-terms-error></small></div>
-    <div class="register-submit-area"><button class="auth-submit" type="submit">Create Resident Account</button><p class="form-status" role="status" aria-live="polite"></p><p class="auth-switch">Already have an account? <a href="resident-login.html">Sign In</a></p></div>
-  </form>
+
+    <header class="register-heading">
+        <a class="register-mark"
+           href="../../../index.html"
+           aria-label="iUlat home">iU</a>
+
+        <h1>Create Resident Account</h1>
+
+        <p>
+            Register your account to stay connected with your barangay
+            and access resident services.
+        </p>
+
+        <div class="register-notice">
+            <strong>Account Verification</strong>
+            <span>
+                Your registration may require verification by authorized
+                barangay personnel.
+            </span>
+        </div>
+    </header>
+
+    <form class="resident-registration-form"
+          data-auth-form="resident-register"
+          novalidate>
+
+        <!-- 1. PERSONAL INFORMATION -->
+        <section class="register-section">
+            <div class="section-heading">
+                <span>1</span>
+                <div>
+                    <h2>Personal Information</h2>
+                    <p>Provide your basic personal information.</p>
+                </div>
+            </div>
+
+            <div class="register-grid">
+                <div class="form-group">
+                    <label for="firstName">First Name <b>*</b></label>
+                    <input class="form-control" id="firstName"
+                           name="firstName" autocomplete="given-name"
+                           required placeholder="Enter your first name">
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="middleName">Middle Name</label>
+                    <input class="form-control" id="middleName"
+                           name="middleName" autocomplete="additional-name"
+                           placeholder="Enter your middle name">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name <b>*</b></label>
+                    <input class="form-control" id="lastName"
+                           name="lastName" autocomplete="family-name"
+                           required placeholder="Enter your last name">
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthDate">Birthdate <b>*</b></label>
+                    <input class="form-control" id="birthDate"
+                           name="birthDate" type="date"
+                           autocomplete="bday" required>
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input class="form-control" id="age" name="age"
+                           readonly placeholder="Automatically calculated">
+                    <small class="field-hint">
+                        Automatically calculated from your birthdate.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="placeOfBirth">Place of Birth</label>
+                    <input class="form-control" id="placeOfBirth"
+                           name="placeOfBirth"
+                           placeholder="City / Municipality, Province">
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="gender" name="gender">
+                        <option value="">Select gender</option>
+                        <option>Female</option>
+                        <option>Male</option>
+                        <option>Prefer not to say</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="civilStatus">Civil Status</label>
+                    <select class="form-control" id="civilStatus"
+                            name="civilStatus">
+                        <option value="">Select civil status</option>
+                        <option>Single</option>
+                        <option>Married</option>
+                        <option>Widowed</option>
+                        <option>Separated</option>
+                        <option>Divorced</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input class="form-control" id="nationality"
+                           name="nationality" value="Filipino">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ADDRESS AND RESIDENCY -->
+        <section class="register-section">
+            <div class="section-heading">
+                <span>2</span>
+                <div>
+                    <h2>Address &amp; Residency</h2>
+                    <p>Tell us where you currently reside.</p>
+                </div>
+            </div>
+
+            <div class="register-grid">
+                <div class="form-group register-full">
+                    <label for="address">Complete Address <b>*</b></label>
+                    <textarea class="form-control" id="address"
+                              name="address" autocomplete="street-address"
+                              required
+                              placeholder="House/Unit No., Street, Barangay, Municipality/City, Province"
+                              rows="3"></textarea>
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="yearsResidency">Years of Residency</label>
+                    <input class="form-control" id="yearsResidency"
+                           name="yearsResidency" type="number"
+                           min="0" max="120" placeholder="e.g. 5">
+                    <small class="field-error"></small>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. CONTACT INFORMATION -->
+        <section class="register-section">
+            <div class="section-heading">
+                <span>3</span>
+                <div>
+                    <h2>Contact Information</h2>
+                    <p>Provide your current contact details.</p>
+                </div>
+            </div>
+
+            <div class="register-grid">
+                <div class="form-group">
+                    <label for="phone">Mobile Number <b>*</b></label>
+                    <input class="form-control" id="phone" name="phone"
+                           type="tel" autocomplete="tel" required
+                           placeholder="09XXXXXXXXX">
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <b>*</b></label>
+                    <input class="form-control" id="email" name="email"
+                           type="email" autocomplete="email" required
+                           placeholder="you@example.com">
+                    <small class="field-error"></small>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. HOUSEHOLD INFORMATION -->
+        <section class="register-section">
+            <div class="section-heading">
+                <span>4</span>
+                <div>
+                    <h2>Resident &amp; Household Information</h2>
+                    <p>Provide basic household information.</p>
+                </div>
+            </div>
+
+            <div class="register-grid">
+                <div class="form-group">
+                    <label for="voterStatus">Voter Status</label>
+                    <select class="form-control" id="voterStatus"
+                            name="voterStatus">
+                        <option value="">Select status</option>
+                        <option>Registered voter in this barangay</option>
+                        <option>Registered voter in another barangay</option>
+                        <option>Not registered</option>
+                        <option>Not eligible</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="householdHead">Household Head?</label>
+                    <select class="form-control" id="householdHead"
+                            name="householdHead">
+                        <option value="">Select option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="familyMembers">Number of Family Members</label>
+                    <input class="form-control" id="familyMembers"
+                           name="familyMembers" type="number"
+                           min="1" max="100" placeholder="e.g. 4">
+                    <small class="field-error"></small>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ADDITIONAL INFORMATION -->
+        <section class="register-section">
+            <div class="section-heading">
+                <span>5</span>
+                <div>
+                    <h2>Additional Information</h2>
+                    <p>
+                        Optional information that may help during emergencies
+                        or community services.
+                    </p>
+                </div>
+            </div>
+
+            <div class="register-grid">
+                <div class="form-group">
+                    <label for="emergencyName">Emergency Contact Name</label>
+                    <input class="form-control" id="emergencyName"
+                           name="emergencyName" placeholder="Full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="emergencyPhone">Emergency Contact Number</label>
+                    <input class="form-control" id="emergencyPhone"
+                           name="emergencyPhone" type="tel"
+                           placeholder="09XXXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="emergencyRelationship">
+                        Relationship to Resident
+                    </label>
+                    <select class="form-control" id="emergencyRelationship"
+                            name="emergencyRelationship">
+                        <option value="">Select relationship</option>
+                        <option>Parent</option>
+                        <option>Spouse</option>
+                        <option>Child</option>
+                        <option>Sibling</option>
+                        <option>Relative</option>
+                        <option>Friend</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group register-full">
+                    <label for="specialNeeds">Disability / Special Needs</label>
+                    <textarea class="form-control" id="specialNeeds"
+                              name="specialNeeds" rows="3"
+                              placeholder="If applicable, describe any disability or special needs."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ID VERIFICATION -->
+        <section class="register-section">
+            <div class="section-heading">
+                <span>6</span>
+                <div>
+                    <h2>Identity Verification</h2>
+                    <p>
+                        Select the ID you will use for verification and upload
+                        a clear copy of it.
+                    </p>
+                </div>
+            </div>
+
+            <div class="register-grid">
+                <div class="form-group">
+                    <label for="validIdType">Valid ID Type <b>*</b></label>
+                    <select class="form-control" id="validIdType"
+                            name="validIdType" required>
+                        <option value="">Select valid ID</option>
+                        <option>Philippine National ID</option>
+                        <option>Passport</option>
+                        <option>Driver's License</option>
+                        <option>Voter's ID / Voter Certification</option>
+                        <option>UMID</option>
+                        <option>PhilHealth ID</option>
+                        <option>Postal ID</option>
+                        <option>Senior Citizen ID</option>
+                        <option>PWD ID</option>
+                        <option>Other government-issued ID</option>
+                    </select>
+                    <small class="field-hint">
+                        Select the government-issued ID you will use for verification.
+                    </small>
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="validIdFile">Upload Valid ID <b>*</b></label>
+                    <input class="form-control file-control"
+                           id="validIdFile" name="validIdFile"
+                           type="file" accept="image/*,.pdf" required>
+                    <small class="field-hint">
+                        Upload a clear photo, scan, or PDF of your selected ID.
+                    </small>
+                    <small class="field-error"></small>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. ACCOUNT SECURITY -->
+        <section class="register-section">
+            <div class="section-heading">
+                <span>7</span>
+                <div>
+                    <h2>Account Security</h2>
+                    <p>Create the password you will use to sign in.</p>
+                </div>
+            </div>
+
+            <div class="register-grid">
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label for="password">Password <b>*</b></label>
+
+                    <div class="password-wrap">
+                        <input
+                            class="form-control"
+                            id="password"
+                            name="password"
+                            type="password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                            placeholder="Create a password"
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-toggle-password="password"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            <svg viewBox="0 0 24 24"
+                                 width="20" height="20"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="1.8"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <small class="field-hint">
+                        Use at least 8 characters.
+                    </small>
+                    <small class="field-error"></small>
+                </div>
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-group">
+                    <label for="confirmPassword">
+                        Confirm Password <b>*</b>
+                    </label>
+
+                    <div class="password-wrap">
+                        <input
+                            class="form-control"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            type="password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                            placeholder="Re-enter your password"
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-toggle-password="confirmPassword"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            <svg viewBox="0 0 24 24"
+                                 width="20" height="20"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="1.8"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <small class="field-error"></small>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TERMS AND CONDITIONS -->
+        <div class="register-terms">
+            <label class="check-label">
+                <input type="checkbox" name="agreeTerms" required>
+                <span>
+                    I agree to the
+                    <a href="#" class="text-link"
+                       data-demo-link="Add the final Terms & Conditions page before launch.">
+                        Terms &amp; Conditions
+                    </a>
+                    and
+                    <a href="#" class="text-link"
+                       data-demo-link="Add the final Privacy Policy page before launch.">
+                        Privacy Policy
+                    </a>
+                    of iUlat.
+                </span>
+            </label>
+
+            <small class="field-error terms-error"
+                   data-terms-error></small>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="register-submit-area">
+            <button class="auth-submit" type="submit">
+                Create Resident Account
+            </button>
+
+            <p class="form-status" role="status" aria-live="polite"></p>
+
+            <p class="auth-switch">
+                Already have an account?
+                <a href="resident-login.html">Sign In</a>
+            </p>
+        </div>
+
+    </form>
 </main>
-</body></html>
+   
+
+
+<footer class="auth-footer">
+        <span>
+            © <span data-current-year></span>
+            iUlat Barangay Community Portal
+        </span>
+
+        <span>Built for a more connected community.</span>
+    </footer>
+</body>
+</html>

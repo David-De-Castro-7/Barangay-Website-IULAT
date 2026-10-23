@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102a43">
+
+    <title>My Profile | iUlat Resident Portal</title>
+
+    <link rel="stylesheet" href="../../../assets/css/global.css">
+    <link rel="stylesheet" href="../../../assets/css/resident-profile.css">
+
+    <script src="../../../assets/js/resident-profile.js" defer></script>
+</head>
+
+<body class="resident-profile-page">
+
+    <button
+        type="button"
+        class="profile-menu-toggle"
+        id="profile-menu-toggle"
+        aria-label="Open navigation menu"
+        aria-controls="profile-sidebar"
+        aria-expanded="false"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div
+        class="profile-sidebar-overlay"
+        id="profile-sidebar-overlay"
+        hidden
+    ></div>
+
+    <div class="resident-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="profile-sidebar" id="profile-sidebar">
+
+            <a class="profile-sidebar-brand" href="../../../../index.html">
+                <span class="profile-brand-mark">iU</span>
+
+                <span class="profile-brand-copy">
+                    <strong>iUlat</strong>
+                    <small>Resident Portal</small>
+                </span>
+            </a>
+
+        
+
+            <p class="profile-sidebar-label">RESIDENT MENU</p>
+
+            <nav class="profile-sidebar-nav" aria-label="Resident navigation">
+
+                <a
+                    class="profile-nav-link"
+                    href="profile.html"
+                    aria-current="page"
+                >
+                    <span class="nav-icon" aria-hidden="true">◉</span>
+                    <span>My Profile</span>
+                </a>
+
+                <a class="profile-nav-link" href="../../announcements.html">
+                    <span class="nav-icon" aria-hidden="true">▤</span>
+                    <span>Announcements</span>
+                </a>
+
+                <a class="profile-nav-link" href="../../reports.html">
+                    <span class="nav-icon" aria-hidden="true">⚑</span>
+                    <span>My Reports</span>
+                </a>
+
+                <a class="profile-nav-link" href="../../services.html">
+                    <span class="nav-icon" aria-hidden="true">▦</span>
+                    <span>Services &amp; Payouts</span>
+                </a>
+
+                <a class="profile-nav-link" href="../../contact.html">
+                    <span class="nav-icon" aria-hidden="true">✉</span>
+                    <span>Contact Barangay</span>
+                </a>
+
+            </nav>
+
+            <div class="profile-sidebar-bottom">
+
+                <div class="sidebar-help-card">
+                    <span class="help-icon" aria-hidden="true">?</span>
+                    <strong>Need assistance?</strong>
+                    <p>Contact your barangay office for help with your account.</p>
+                    <a href="../../contact.html">Get Help <span aria-hidden="true">→</span></a>
+                </div>
+
+                <button
+                    type="button"
+                    class="profile-signout-button"
+                    id="profile-signout-button"
+                >
+                    <span aria-hidden="true">↪</span>
+                    Sign Out
+                </button>
+
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header class="profile-topbar">
+                <div>
+                    <p class="eyebrow">RESIDENT PORTAL</p>
+                    <h1>My Profile</h1>
+                    <p class="topbar-description">
+                        Manage your personal information and resident details.
+                    </p>
+                </div>
+
+                <a class="back-home-link" href="../../../../index.html">
+                    <span aria-hidden="true">←</span> Back to Home
+                </a>
+            </header>
+
+            <!-- PROFILE SUMMARY -->
+            <section class="profile-summary-card" aria-label="Profile summary">
+
+                <div class="profile-summary-main">
+                    <div class="profile-summary-avatar" id="profileAvatar">R</div>
+
+                    <div class="profile-summary-copy">
+                        <span class="verified-label">
+                            <span aria-hidden="true">✓</span> Resident Account
+                        </span>
+
+                        <h2 id="displayName">Resident Name</h2>
+                        <p id="displayEmail">resident@example.com</p>
+
+                        <div class="resident-id-line">
+                            <span>Resident ID:</span>
+                            <strong id="residentId">Not assigned</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="editButton">
+                    <span aria-hidden="true">✎</span> Edit Profile
+                </button>
+
+            </section>
+
+            <div class="profile-content-grid">
+
+                <!-- PERSONAL INFORMATION FORM -->
+                <section class="profile-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Personal Information</h2>
+                            <p>Keep your resident information accurate and up to date.</p>
+                        </div>
+
+                        <span class="panel-heading-icon" aria-hidden="true">▤</span>
+                    </div>
+
+                    <div class="demo-notice" role="note">
+                        <span aria-hidden="true">ⓘ</span>
+                        <p>
+                            Demo mode: your changes are stored in this browser only.
+                            They are not yet submitted to the barangay database.
+                        </p>
+                    </div>
+
+                    <form id="profileForm">
+
+                        <fieldset id="profileFieldset" disabled>
+
+                            <div class="form-section">
+                                <h3>Basic Details</h3>
+
+                                <div class="profile-form-grid">
+
+                                    <div class="form-group">
+                                        <label for="firstName">First Name <span>*</span></label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="firstName"
+                                            name="firstName"
+                                            autocomplete="given-name"
+                                            required
+                                            maxlength="60"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="middleName">Middle Name</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="middleName"
+                                            name="middleName"
+                                            autocomplete="additional-name"
+                                            maxlength="60"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name <span>*</span></label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="lastName"
+                                            name="lastName"
+                                            autocomplete="family-name"
+                                            required
+                                            maxlength="60"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="suffix">Suffix</label>
+                                        <select class="form-control" id="suffix" name="suffix">
+                                            <option value="">None</option>
+                                            <option value="Jr.">Jr.</option>
+                                            <option value="Sr.">Sr.</option>
+                                            <option value="II">II</option>
+                                            <option value="III">III</option>
+                                            <option value="IV">IV</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="birthDate">Date of Birth <span>*</span></label>
+                                        <input
+                                            class="form-control"
+                                            type="date"
+                                            id="birthDate"
+                                            name="birthDate"
+                                            autocomplete="bday"
+                                            required
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="age">Age</label>
+                                        <input
+                                            class="form-control read-only-field"
+                                            type="number"
+                                            id="age"
+                                            name="age"
+                                            readonly
+                                            aria-describedby="ageHint"
+                                        >
+                                        <small class="field-hint" id="ageHint">
+                                            Calculated from your date of birth.
+                                        </small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="sex">Sex</label>
+                                        <select class="form-control" id="sex" name="sex">
+                                            <option value="">Select</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Prefer not to say">Prefer not to say</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="civilStatus">Civil Status</label>
+                                        <select class="form-control" id="civilStatus" name="civilStatus">
+                                            <option value="">Select</option>
+                                            <option value="Single">Single</option>
+                                            <option value="Married">Married</option>
+                                            <option value="Widowed">Widowed</option>
+                                            <option value="Separated">Separated</option>
+                                            <option value="Annulled">Annulled</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="nationality">Nationality</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="nationality"
+                                            name="nationality"
+                                            value="Filipino"
+                                            maxlength="60"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="occupation">Occupation</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="occupation"
+                                            name="occupation"
+                                            maxlength="100"
+                                        >
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Contact Information</h3>
+
+                                <div class="profile-form-grid">
+
+                                    <div class="form-group">
+                                        <label for="email">Email Address <span>*</span></label>
+                                        <input
+                                            class="form-control"
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            autocomplete="email"
+                                            required
+                                            maxlength="254"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone">Mobile Number</label>
+                                        <input
+                                            class="form-control"
+                                            type="tel"
+                                            id="phone"
+                                            name="phone"
+                                            autocomplete="tel"
+                                            inputmode="tel"
+                                            maxlength="30"
+                                            placeholder="e.g. 09XX XXX XXXX"
+                                        >
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Residential Address</h3>
+
+                                <div class="profile-form-grid">
+
+                                    <div class="form-group form-group-full">
+                                        <label for="houseNumber">House No. / Street</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="houseNumber"
+                                            name="houseNumber"
+                                            autocomplete="street-address"
+                                            maxlength="150"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="purok">Purok / Sitio</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="purok"
+                                            name="purok"
+                                            maxlength="100"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="barangay">Barangay</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="barangay"
+                                            name="barangay"
+                                            maxlength="100"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="city">City / Municipality</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="city"
+                                            name="city"
+                                            autocomplete="address-level2"
+                                            maxlength="100"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="province">Province</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="province"
+                                            name="province"
+                                            autocomplete="address-level1"
+                                            maxlength="100"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="postalCode">Postal Code</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="postalCode"
+                                            name="postalCode"
+                                            inputmode="numeric"
+                                            autocomplete="postal-code"
+                                            maxlength="10"
+                                        >
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Household Information</h3>
+
+                                <div class="profile-form-grid">
+
+                                    <div class="form-group">
+                                        <label for="householdSize">Household Size</label>
+                                        <input
+                                            class="form-control"
+                                            type="number"
+                                            id="householdSize"
+                                            name="householdSize"
+                                            min="1"
+                                            max="100"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="householdRole">Household Role</label>
+                                        <select
+                                            class="form-control"
+                                            id="householdRole"
+                                            name="householdRole"
+                                        >
+                                            <option value="">Select</option>
+                                            <option value="Head of Household">Head of Household</option>
+                                            <option value="Spouse">Spouse</option>
+                                            <option value="Child">Child</option>
+                                            <option value="Parent">Parent</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Emergency Contact</h3>
+
+                                <div class="profile-form-grid">
+
+                                    <div class="form-group">
+                                        <label for="emergencyName">Contact Person</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="emergencyName"
+                                            name="emergencyName"
+                                            maxlength="120"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="emergencyRelationship">Relationship</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="emergencyRelationship"
+                                            name="emergencyRelationship"
+                                            maxlength="60"
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="emergencyPhone">Contact Number</label>
+                                        <input
+                                            class="form-control"
+                                            type="tel"
+                                            id="emergencyPhone"
+                                            name="emergencyPhone"
+                                            inputmode="tel"
+                                            maxlength="30"
+                                        >
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Resident Identification</h3>
+
+                                <div class="profile-form-grid">
+
+                                    <div class="form-group">
+                                        <label for="idType">Identification Type</label>
+                                        <select class="form-control" id="idType" name="idType">
+                                            <option value="">Select</option>
+                                            <option value="Barangay ID">Barangay ID</option>
+                                            <option value="National ID">National ID</option>
+                                            <option value="PhilSys ID">PhilSys ID</option>
+                                            <option value="Voter's ID">Voter's ID</option>
+                                            <option value="Driver's License">Driver's License</option>
+                                            <option value="Passport">Passport</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="idNumber">Identification Number</label>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            id="idNumber"
+                                            name="idNumber"
+                                            maxlength="100"
+                                            autocomplete="off"
+                                        >
+                                    </div>
+
+                                    <div class="form-group form-group-full">
+                                        <label for="idFile">Upload Supporting ID (optional)</label>
+                                        <input
+                                            class="form-control file-control"
+                                            type="file"
+                                            id="idFile"
+                                            name="idFile"
+                                            accept=".jpg,.jpeg,.png,.pdf"
+                                            aria-describedby="idFileHint"
+                                        >
+                                        <small class="field-hint" id="idFileHint">
+                                            JPG, PNG, or PDF. Uploading requires backend support;
+                                            the file will not be saved in demo mode.
+                                        </small>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <div class="form-actions" id="formActions" hidden>
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                id="cancelButton"
+                            >
+                                Cancel
+                            </button>
+
+                            <button type="submit" class="btn btn-primary" id="saveButton">
+                                <span aria-hidden="true">✓</span> Save Changes
+                            </button>
+                        </div>
+
+                        <p
+                            class="form-message"
+                            id="formMessage"
+                            role="status"
+                            aria-live="polite"
+                            hidden
+                        ></p>
+
+                    </form>
+                </section>
+
+                <!-- RIGHT COLUMN -->
+                <aside class="profile-right-column">
+
+                    <section class="profile-panel account-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h2>Account Overview</h2>
+                                <p>Your resident account at a glance.</p>
+                            </div>
+                        </div>
+
+                        <div class="account-status-row">
+                            <span class="status-dot"></span>
+                            <div>
+                                <strong>Profile Available</strong>
+                                <span>Demo account</span>
+                            </div>
+                        </div>
+
+                        <div class="account-detail-row">
+                            <span>Account Type</span>
+                            <strong>Resident</strong>
+                        </div>
+
+                        <div class="account-detail-row">
+                            <span>Resident ID</span>
+                            <strong id="overviewResidentId">Not assigned</strong>
+                        </div>
+
+                        <div class="account-detail-row">
+                            <span>Storage</span>
+                            <strong>Browser demo</strong>
+                        </div>
+
+                        <p class="account-disclaimer">
+                            Account verification and official resident ID assignment
+                            will be connected to the backend later.
+                        </p>
+                    </section>
+
+                    <section class="profile-panel quick-links-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h2>Quick Links</h2>
+                                <p>Explore your resident portal.</p>
+                            </div>
+                        </div>
+
+                        <a class="quick-link" href="../../announcements.html">
+                            <span class="quick-link-icon">▤</span>
+                            <span>
+                                <strong>Announcements</strong>
+                                <small>Barangay updates and notices</small>
+                            </span>
+                            <span class="quick-link-arrow">→</span>
+                        </a>
+
+                        <a class="quick-link" href="../../reports.html">
+                            <span class="quick-link-icon">⚑</span>
+                            <span>
+                                <strong>My Reports</strong>
+                                <small>Report community concerns</small>
+                            </span>
+                            <span class="quick-link-arrow">→</span>
+                        </a>
+
+                        <a class="quick-link" href="../../services.html">
+                            <span class="quick-link-icon">▦</span>
+                            <span>
+                                <strong>Services &amp; Payouts</strong>
+                                <small>Browse resident services</small>
+                            </span>
+                            <span class="quick-link-arrow">→</span>
+                        </a>
+                    </section>
+
+                </aside>
+            </div>
+
+            <footer class="profile-footer">
+                <p>© <span id="currentYear">2026</span> iUlat Resident Portal</p>
+                <p>Reliable information for a connected community.</p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+

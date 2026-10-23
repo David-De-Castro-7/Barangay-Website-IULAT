@@ -127,6 +127,28 @@
         Contact
         </a>
 
+        <!-- SEARCH --<form
+                            class="hero-search"
+                            action="frontend/pages/announcements.html"
+                            method="get"
+                        >
+
+                            <input
+                                type="search"
+                                name="search"
+                                placeholder="Search announcements..."
+                                aria-label="Search announcements"
+                            >
+
+                            <button type="submit">
+                                Search
+                            </button>
+
+                        </form>
+
+            
+
+
        </div>
 
                 <!-- AUTH BUTTONS -->
@@ -179,6 +201,8 @@
 
     <main>
 
+        
+
 
         <!-- =================================================
              HERO
@@ -216,27 +240,7 @@
                         </p>
 
 
-                        <!-- SEARCH -->
-
-                        <form
-                            class="hero-search"
-                            action="frontend/pages/announcements.html"
-                            method="get"
-                        >
-
-                            <input
-                                type="search"
-                                name="search"
-                                placeholder="Search announcements..."
-                                aria-label="Search announcements"
-                            >
-
-                            <button type="submit">
-                                Search
-                            </button>
-
-                        </form>
-
+                        
 
                         <div class="hero-links">
 
@@ -262,104 +266,44 @@
 
                     <!-- HERO CARD -->
 
-                    <div class="hero-visual">
+                    
+<div class="hero-visual">
 
-                        <div class="hero-announcement-card">
+    <div class="hero-announcement-card hero-empty-card">
 
+        <div class="hero-announcement-top">
+            <div>
+                <span class="small-label">OFFICIAL UPDATES</span>
+                <h3>Barangay Announcements</h3>
+            </div>
+        </div>
 
-                            <div class="hero-announcement-top">
+        <div class="hero-announcement-body">
+            <div class="announcement-symbol" aria-hidden="true">
+                📢
+            </div>
 
-                                <div>
+            <div>
+                <h4>No Published Announcements</h4>
+                <p>
+                    Official announcements published by authorized
+                    barangay officials will appear here.
+                </p>
+            </div>
+        </div>
 
-                                    <span class="small-label">
-                                        LATEST ANNOUNCEMENT
-                                    </span>
+        <div class="hero-announcement-footer">
+            <span>Official barangay information</span>
 
-                                    <h3>
-                                        Barangay General Assembly
-                                    </h3>
+            <a href="frontend/pages/announcements.html">
+                View Announcements →
+            </a>
+        </div>
 
-                                </div>
+    </div>
 
+</div>
 
-                                <span class="verified">
-
-                                    <span class="verified-icon">
-                                        ✓
-                                    </span>
-
-                                    Verified
-
-                                </span>
-
-                            </div>
-
-
-
-                            <div class="hero-announcement-body">
-
-                                <div class="announcement-symbol">
-                                    📢
-                                </div>
-
-                                <div>
-
-                                    <p>
-                                        All residents are encouraged
-                                        to attend the upcoming barangay
-                                        general assembly.
-                                    </p>
-
-                                    <span class="announcement-date">
-                                        October 24, 2026 · 2:00 PM
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="hero-announcement-footer">
-
-                                <span>
-                                    Posted by Barangay Office
-                                </span>
-
-                                <a
-                                    href="frontend/pages/announcements.html"
-                                >
-                                    View Details →
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- VERIFIED NOTIFICATION -->
-
-                        <div class="hero-notification">
-
-                            <div class="notification-circle">
-                                ✓
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Official Information
-                                </strong>
-
-                                <span>
-                                    Verified by Barangay Office
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
 
                 </div>
 
@@ -373,245 +317,67 @@
              LATEST ANNOUNCEMENTS
              ================================================= -->
 
-        <section class="section announcements-section">
-
-            <div class="container">
-
-
-                <div class="section-header">
-
-                    <span class="section-label">
-                        LATEST UPDATES
-                    </span>
-
-                    <h2>
-                        Latest Announcements
-                    </h2>
-
-                    <p>
-                        Stay updated with official information
-                        and announcements from your barangay.
-                    </p>
-
-                </div>
-
-
-
-                <div class="announcement-grid">
-
-
-                    <!-- CARD 1 -->
-
-                    <article class="announcement-card">
-
-                        <div class="announcement-card-image">
-
-                            <span>
-                                ANNOUNCEMENT
-                            </span>
-
-                        </div>
-
-
-                        <div class="announcement-card-content">
-
-                            <div class="announcement-author">
-
-                                <div class="author-avatar">
-                                    B
-                                </div>
-
-                                <div>
-
-                                    <strong>
-                                        Barangay Office
-                                    </strong>
-
-                                    <span>
-                                        September 2026
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-                            <span class="badge badge-primary">
-                                Community
-                            </span>
-
-
-                            <h3>
-                                Barangay General Assembly
-                            </h3>
-
-
-                            <p>
-                                Residents are invited to attend the
-                                upcoming barangay general assembly.
-                            </p>
-
-
-                            <a
-                                href="frontend/pages/announcements.html"
-                                class="card-link"
-                            >
-                                View Details →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- CARD 2 -->
-
-                    <article class="announcement-card">
-
-                        <div class="announcement-card-image health">
-
-                            <span>
-                                HEALTH PROGRAM
-                            </span>
-
-                        </div>
-
-
-                        <div class="announcement-card-content">
-
-                            <div class="announcement-author">
-
-                                <div class="author-avatar">
-                                    B
-                                </div>
-
-                                <div>
-
-                                    <strong>
-                                        Barangay Health Office
-                                    </strong>
-
-                                    <span>
-                                        September 2026
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-                            <span class="badge badge-success">
-                                Health
-                            </span>
-
-
-                            <h3>
-                                Free Medical Check-Up
-                            </h3>
-
-
-                            <p>
-                                Free medical consultation and basic
-                                health services will be available
-                                for residents.
-                            </p>
-
-
-                            <a
-                                href="frontend/pages/announcements.html"
-                                class="card-link"
-                            >
-                                View Details →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- CARD 3 -->
-
-                    <article class="announcement-card">
-
-                        <div class="announcement-card-image community">
-
-                            <span>
-                                COMMUNITY
-                            </span>
-
-                        </div>
-
-
-                        <div class="announcement-card-content">
-
-                            <div class="announcement-author">
-
-                                <div class="author-avatar">
-                                    B
-                                </div>
-
-                                <div>
-
-                                    <strong>
-                                        Barangay Office
-                                    </strong>
-
-                                    <span>
-                                        September 2026
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-                            <span class="badge badge-primary">
-                                Community
-                            </span>
-
-
-                            <h3>
-                                Community Clean-Up Drive
-                            </h3>
-
-
-                            <p>
-                                Join the community clean-up drive and
-                                help maintain a clean and safe barangay.
-                            </p>
-
-
-                            <a
-                                href="frontend/pages/announcements.html"
-                                class="card-link"
-                            >
-                                View Details →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-
-                <div class="section-action">
-
-                    <a
-                        href="frontend/pages/announcements.html"
-                        class="btn btn-primary"
-                    >
-                        View All Announcements
-                    </a>
-
-                </div>
-
+         
+<section class="section announcements-section">
+
+    <div class="container">
+
+        <div class="section-header">
+            <span class="section-label">OFFICIAL UPDATES</span>
+
+            <h2>Latest Announcements</h2>
+
+            <p>
+                Read official notices, emergency advisories,
+                services, and community updates published by
+                authorized barangay officials.
+            </p>
+        </div>
+
+        <div
+            class="announcement-grid"
+            id="homeAnnouncementFeed"
+            aria-live="polite"
+        >
+            <!--
+                Intentionally empty.
+
+                Only published announcements from the backend
+                will be displayed here after integration.
+            -->
+        </div>
+
+        <div
+            class="announcement-empty"
+            id="homeAnnouncementEmpty"
+            role="status"
+        >
+            <div class="announcement-empty-icon" aria-hidden="true">
+                📢
             </div>
 
-        </section>
+            <h3>No Announcements Yet</h3>
+
+            <p>
+                There are currently no published barangay
+                announcements. Please check again later for
+                official community updates.
+            </p>
+        </div>
+
+        <div class="section-action">
+            <a
+                href="frontend/pages/announcements.html"
+                class="btn btn-primary"
+            >
+                View All Announcements
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
 
 
 

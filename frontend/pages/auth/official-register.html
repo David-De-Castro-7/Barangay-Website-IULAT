@@ -1,47 +1,207 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Official Registration Request | iUlat</title>
   <link rel="stylesheet" href="../../assets/css/global.css">
   <link rel="stylesheet" href="../../assets/css/auth.css">
   <script src="../../assets/js/auth.js" defer></script>
 </head>
+
 <body class="auth-page official-auth">
-<header class="auth-header">
-  <a class="auth-brand" href="../../../index.html"><span class="brand-logo">i</span><span><b>iUlat</b><small>BARANGAY COMMUNITY PORTAL</small></span></a>
-  <a class="back-link" href="../../../index.html">← Back to Home</a>
-</header>
-<main class="auth-layout register-layout">
-  <aside class="auth-visual official-visual">
-    <span class="eyebrow">OFFICIAL ACCOUNT REQUEST</span>
-    <h1>Trusted access.<br><span>Public service.</span></h1>
-    <p>Official accounts require identity and role verification before management tools are made available.</p>
-    <div class="visual-benefit"><span>✓</span><div><b>Approval required</b><small>Submitting this form does not grant immediate access.</small></div></div>
-    <div class="visual-benefit"><span>✓</span><div><b>Role verification</b><small>Information may be checked by an authorized administrator.</small></div></div>
-    <i class="orb orb-one"></i><i class="orb orb-two"></i>
-  </aside>
-  <section class="auth-panel"><div class="auth-card auth-card-wide">
-    <div class="mobile-brand"><span class="brand-logo">i</span><b>iUlat</b></div>
-    <span class="form-kicker official-kicker">BARANGAY OFFICIALS</span><h2>Request an official account</h2><p class="auth-intro">Provide your work details. Your request must be reviewed before activation.</p>
-    <div class="notice-box"><b>i</b><p><strong>Approval required.</strong> Do not use this form for a resident account.</p></div>
-    <form class="auth-form" data-auth-form="official-register" novalidate>
-      <div class="form-grid">
-        <div class="form-group"><label for="firstName">First name</label><input class="form-control" id="firstName" name="firstName" autocomplete="given-name" required placeholder="First name"><small class="field-error"></small></div>
-        <div class="form-group"><label for="lastName">Last name</label><input class="form-control" id="lastName" name="lastName" autocomplete="family-name" required placeholder="Last name"><small class="field-error"></small></div>
-        <div class="form-group"><label for="email">Official email address</label><input class="form-control" id="email" name="email" type="email" autocomplete="email" required placeholder="official@barangay.gov.ph"><small class="field-error"></small></div>
-        <div class="form-group"><label for="phone">Contact number</label><input class="form-control" id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="09XX XXX XXXX"><small class="field-error"></small></div>
-        <div class="form-group"><label for="position">Official position</label><select class="form-control" id="position" name="position" required><option value="">Select your position</option><option>Barangay Captain / Punong Barangay</option><option>Barangay Kagawad</option><option>Barangay Secretary</option><option>Barangay Treasurer</option><option>Barangay Staff</option><option>Other authorized personnel</option></select><small class="field-error"></small></div>
-        <div class="form-group"><label for="officialId">Official / employee ID reference</label><input class="form-control" id="officialId" name="officialId" required placeholder="Enter reference number"><small class="field-error"></small></div>
-        <div class="form-group full-width"><label for="officeAddress">Barangay office / assigned barangay</label><input class="form-control" id="officeAddress" name="officeAddress" required placeholder="Barangay name and municipality/city"><small class="field-error"></small></div>
-        <div class="form-group"><label for="password">Create password</label><div class="password-wrap"><input class="form-control" id="password" name="password" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters"><button type="button" class="password-toggle" data-toggle-password="password">Show</button></div><small class="field-error"></small></div>
-        <div class="form-group"><label for="confirmPassword">Confirm password</label><div class="password-wrap"><input class="form-control" id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required placeholder="Re-enter password"><button type="button" class="password-toggle" data-toggle-password="confirmPassword">Show</button></div><small class="field-error"></small></div>
+
+  <header class="auth-header">
+    <a class="auth-brand" href="../../../index.html">
+      <span class="brand-logo">iU</span>
+      <span>
+        <b>iUlat</b>
+        <small>BARANGAY COMMUNITY PORTAL</small>
+      </span>
+    </a>
+    <a class="back-link" href="../../../index.html">← Back to Home</a>
+  </header>
+
+  <main class="auth-layout register-layout">
+
+    <aside class="auth-visual official-visual">
+      <span class="eyebrow">OFFICIAL ACCOUNT REQUEST</span>
+      <h1>Trusted access.<br><span>Public service.</span></h1>
+      <p>Official accounts require identity and role verification before management tools are made available.</p>
+
+      <div class="visual-benefit">
+        <span>✓</span>
+        <div>
+          <b>Approval required</b>
+          <small>Submitting this form does not grant immediate access.</small>
+        </div>
       </div>
-      <label class="check-label terms-check"><input type="checkbox" name="authorization" required><span>I confirm I am applying in my official capacity and consent to verification of these details.</span></label><small class="field-error terms-error" data-authorization-error></small>
-      <button class="auth-submit" type="submit">Submit for approval </button><p class="form-status" role="status" aria-live="polite"></p>
-    </form>
-    
-  </div></section>
-</main>
-<footer class="auth-footer"><span>© <span data-current-year></span> iUlat Barangay Community Portal</span><span>Official accounts are subject to verification and approval.</span></footer>
-</body></html>
+
+      <div class="visual-benefit">
+        <span>✓</span>
+        <div>
+          <b>Role verification</b>
+          <small>Information may be checked by an authorized administrator.</small>
+        </div>
+      </div>
+
+      <i class="orb orb-one"></i>
+      <i class="orb orb-two"></i>
+    </aside>
+
+    <section class="auth-panel">
+      <div class="auth-card auth-cards-wide">
+
+        <div class="mobile-brand">
+          <span class="brand-logo">iU</span>
+          <b>iUlat</b>
+        </div>
+
+        <span class="form-kicker official-kicker">BARANGAY OFFICIALS</span>
+        <h2>Request an official account</h2>
+        <p class="auth-intro">Provide your work details. Your request must be reviewed before activation.</p>
+
+       
+        <form class="auth-form" data-auth-form="official-register" novalidate>
+
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <input class="form-control" id="firstName" name="firstName"
+                     autocomplete="given-name" required placeholder="First name">
+              <small class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input class="form-control" id="lastName" name="lastName"
+                     autocomplete="family-name" required placeholder="Last name">
+              <small class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Official email address</label>
+              <input class="form-control" id="email" name="email" type="email"
+                     autocomplete="email" required placeholder="official@barangay.gov.ph">
+              <small class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Contact number</label>
+              <input class="form-control" id="phone" name="phone" type="tel"
+                     autocomplete="tel" required placeholder="09XX XXX XXXX">
+              <small class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="position">Official position</label>
+              <select class="form-control" id="position" name="position" required>
+                <option value="">Select your position</option>
+                <option>Barangay Captain / Punong Barangay</option>
+                <option>Barangay Kagawad</option>
+                <option>Barangay Secretary</option>
+                <option>Barangay Treasurer</option>
+                <option>Barangay Staff</option>
+                <option>Other authorized personnel</option>
+              </select>
+              <small class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="officialId">Official / employee ID reference</label>
+              <input class="form-control" id="officialId" name="officialId"
+                     required placeholder="Enter reference number">
+              <small class="field-error"></small>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="officeAddress">Barangay office / assigned barangay</label>
+              <input class="form-control" id="officeAddress" name="officeAddress"
+                     required placeholder="Barangay name and municipality/city">
+              <small class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Create password</label>
+              <div class="password-wrap">
+                <input class="form-control" id="password" name="password" type="password"
+                       autocomplete="new-password" minlength="8" required
+                       placeholder="At least 8 characters">
+
+                <button type="button" class="password-toggle"
+                        data-toggle-password="password"
+                        aria-label="Show password" aria-pressed="false">
+                  <svg class="icon-eye" width="20" height="20" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  <svg class="icon-eye-off" width="20" height="20" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                       style="display:none">
+                    <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+                    <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+                    <line x1="1" y1="1" x2="23" y2="23"/>
+                  </svg>
+                </button>
+              </div>
+              <small class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirm password</label>
+              <div class="password-wrap">
+                <input class="form-control" id="confirmPassword" name="confirmPassword" type="password"
+                       autocomplete="new-password" required placeholder="Re-enter password">
+
+                <button type="button" class="password-toggle"
+                        data-toggle-password="confirmPassword"
+                        aria-label="Show password" aria-pressed="false">
+                  <svg class="icon-eye" width="20" height="20" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  <svg class="icon-eye-off" width="20" height="20" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                       style="display:none">
+                    <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+                    <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+                    <line x1="1" y1="1" x2="23" y2="23"/>
+                  </svg>
+                </button>
+              </div>
+              <small class="field-error"></small>
+            </div>
+
+          </div>
+
+          <label class="check-label terms-check">
+            <input type="checkbox" name="authorization" required>
+            <span>I confirm I am applying in my official capacity and consent to verification of these details.</span>
+          </label>
+          <small class="field-error terms-error" data-authorization-error></small>
+
+          <button class="auth-submit" type="submit">Submit for approval</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="auth-footer">
+    <span>© <span data-current-year></span> iUlat Barangay Community Portal</span>
+    <span>Official accounts are subject to verification and approval.</span>
+  </footer>
+
+</body>
+</html>

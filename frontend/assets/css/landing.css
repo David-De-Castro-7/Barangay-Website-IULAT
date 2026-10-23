@@ -910,6 +910,77 @@
 }
 
 
+
+
+
+/* =========================================
+   ANNOUNCEMENT EMPTY STATES
+   ========================================= */
+
+.announcement-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 48px 24px;
+    margin-top: 24px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 16px;
+}
+
+.announcement-empty[hidden] {
+    display: none;
+}
+
+.announcement-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #eaf3ff;
+    font-size: 28px;
+}
+
+.announcement-empty h3 {
+    margin: 0;
+    color: #102a43;
+    font-size: 21px;
+}
+
+.announcement-empty p {
+    max-width: 520px;
+    margin: 0;
+    color: #627d98;
+    line-height: 1.7;
+}
+
+.hero-empty-card .hero-announcement-body h4 {
+    margin: 0 0 8px;
+    color: #102a43;
+    font-size: 17px;
+}
+
+.hero-empty-card .hero-announcement-body p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================================
    WHY iULAT
    ========================================================= */
@@ -3353,11 +3424,15 @@
 
 
 
-/* =========================================================
-   SERVICES PAGE — POLISHED LAYOUT
-   ========================================================= */
 
-   
+/* =========================================================
+   iULAT SERVICES PAGE — CLEANED STYLES
+========================================================= */
+
+/* =========================
+   SERVICES SECTION
+========================= */
+
 .services-section {
     padding: 85px 0;
     background: #ffffff;
@@ -3370,19 +3445,22 @@
 
 .services-section .section-heading h2 {
     margin: 14px 0;
-    color: #111827;
+    color: #102a43;
     font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15;
+    line-height: 1.2;
     letter-spacing: -0.03em;
 }
 
 .services-section .section-heading p {
-    color: #64748b;
+    color: #627d98;
     font-size: 1rem;
     line-height: 1.8;
 }
 
-/* Search field */
+/* =========================
+   SEARCH AND FILTERS
+   Keep if used in your HTML
+========================= */
 
 .services-controls {
     display: flex;
@@ -3401,22 +3479,19 @@
     min-height: 48px;
     box-sizing: border-box;
     padding: 13px 16px;
-    border: 1px solid #dce1e8;
+    border: 1px solid #d9e2ec;
     border-radius: 10px;
     background: #ffffff;
-    color: #1f2937;
+    color: #243b53;
     font: inherit;
-    transition: border-color 0.2s ease,
-                box-shadow 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .services-search input:focus {
     outline: none;
-    border-color: #1745b5;
-    box-shadow: 0 0 0 3px rgba(23, 69, 181, 0.1);
+    border-color: #1769d1;
+    box-shadow: 0 0 0 3px rgba(23, 105, 209, 0.12);
 }
-
-/* Category filters */
 
 .services-filters {
     display: flex;
@@ -3427,7 +3502,7 @@
 .services-filters button {
     min-height: 44px;
     padding: 10px 16px;
-    border: 1px solid #e5e9f0;
+    border: 1px solid #d9e2ec;
     border-radius: 9px;
     background: #ffffff;
     color: #475569;
@@ -3435,17 +3510,19 @@
     font-size: 0.88rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .services-filters button:hover,
 .services-filters button.active {
-    border-color: #1745b5;
-    background: #1745b5;
+    border-color: #1769d1;
+    background: #1769d1;
     color: #ffffff;
 }
 
-/* Consistent service card grid */
+/* =========================
+   SERVICE CARDS
+========================= */
 
 .services-grid {
     display: grid;
@@ -3458,20 +3535,17 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
-    padding: 30px;
-    border: 1px solid #e7eaf0;
-    border-radius: 18px;
+    padding: 26px;
+    border: 1px solid #e1e8f0;
+    border-radius: 16px;
     background: #ffffff;
-    box-shadow: 0 8px 28px rgba(17, 24, 39, 0.05);
-    transition: transform 0.25s ease,
-                box-shadow 0.25s ease,
-                border-color 0.25s ease;
+    box-shadow: 0 4px 14px rgba(16, 42, 67, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-4px);
-    border-color: #d4def5;
-    box-shadow: 0 16px 38px rgba(17, 24, 39, 0.09);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(16, 42, 67, 0.09);
 }
 
 .service-icon {
@@ -3481,78 +3555,376 @@
     width: 58px;
     height: 58px;
     flex-shrink: 0;
-    margin-bottom: 22px;
-    border-radius: 15px;
-    background: #edf2ff;
-    color: #1745b5;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background: #eaf3ff;
+    color: #1769d1;
     font-size: 1.3rem;
 }
 
+.service-category {
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: #eaf3ff;
+    color: #0d47a1;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
 .service-card h3 {
-    margin: 0 0 12px;
-    color: #111827;
-    font-size: 1.2rem;
-    line-height: 1.4;
+    margin: 0 0 10px;
+    color: #102a43;
+    font-size: 20px;
+    line-height: 1.45;
 }
 
 .service-card p {
-    margin: 0 0 22px;
-    color: #64748b;
-    font-size: 0.95rem;
-    line-height: 1.75;
+    margin: 0 0 20px;
+    color: #52677d;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
-.service-card .btn {
-    align-self: flex-start;
+.service-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
     margin-top: auto;
+    padding: 15px 0 0;
+    border: 0;
+    border-top: 1px solid #e8eef5;
+    background: transparent;
+    color: #1769d1;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
 }
 
-/* Process section */
+.service-details:hover {
+    color: #0d47a1;
+}
+
+.service-details span {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+.service-details:hover span {
+    transform: translateX(4px);
+}
+
+.service-details:focus-visible {
+    outline: 3px solid #91c2ff;
+    outline-offset: 4px;
+}
+
+/* =========================
+   NO SEARCH RESULTS
+========================= */
+
+.no-results {
+    padding: 45px 20px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.no-results[hidden] {
+    display: none;
+}
+
+.no-results h3 {
+    color: #102a43;
+}
+
+.no-results p {
+    color: #64748b;
+}
+
+#reset-filters {
+    cursor: pointer;
+}
+
+/* =========================
+   PREPARATION PROCESS
+========================= */
 
 .services-process {
     padding: 85px 0;
-    background: #f7f9fc;
+    background: #f4f8ff;
+}
+
+.process-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 65px;
+}
+
+.services-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #1769d1;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
 }
 
 .services-process h2 {
-    color: #111827;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15;
+    margin: 0 0 15px;
+    color: #102a43;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.25;
 }
 
-.services-process-grid {
+.services-process > .container > div:first-child > p {
+    color: #627d98;
+    line-height: 1.8;
+}
+
+.process-list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: stretch;
-    gap: 24px;
-    margin-top: 35px;
+    gap: 15px;
 }
 
-.process-card {
-    padding: 28px;
-    border: 1px solid #e5e9f0;
-    border-radius: 16px;
+.process-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px;
+    border: 1px solid #e1eaf5;
+    border-radius: 13px;
     background: #ffffff;
-    box-shadow: 0 8px 25px rgba(17, 24, 39, 0.04);
 }
 
-.process-card h3 {
-    margin: 0 0 12px;
-    color: #111827;
+.process-item > span {
+    display: grid;
+    flex: 0 0 44px;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    background: #eaf3ff;
+    color: #1769d1;
+    font-weight: 800;
 }
 
-.process-card p {
+.process-item h3 {
+    margin: 0 0 7px;
+    color: #102a43;
+    font-size: 1rem;
+}
+
+.process-item p {
     margin: 0;
-    color: #64748b;
+    color: #627d98;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* =========================
+   CONTACT BANNER
+========================= */
+
+.services-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    border: 1px solid #d9e9ff;
+    border-radius: 15px;
+    background: #f4f8ff;
+}
+
+.services-contact h2 {
+    margin: 0 0 10px;
+    color: #102a43;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+.services-contact p {
+    margin: 0;
+    color: #627d98;
+    line-height: 1.7;
+}
+
+/* =========================
+   SERVICE DETAILS MODAL
+========================= */
+
+#service-dialog.service-dialog {
+    width: min(560px, calc(100% - 32px));
+    max-width: 560px;
+    max-height: 85vh;
+    margin: auto;
+    padding: 0;
+    border: none;
+    border-radius: 18px;
+    background: #ffffff;
+    color: #243b53;
+    box-shadow: 0 20px 60px rgba(16, 42, 67, 0.25);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+#service-dialog.service-dialog::backdrop {
+    background: rgba(16, 42, 67, 0.62);
+    backdrop-filter: blur(3px);
+}
+
+.dialog-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 28px 12px;
+}
+
+.dialog-top > :first-child {
+    min-width: 0;
+}
+
+.dialog-top .service-icon {
+    margin-bottom: 0;
+}
+
+.dialog-close {
+    display: inline-flex;
+    flex: 0 0 42px;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background: #eef4fb;
+    color: #102a43;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.dialog-close:hover {
+    background: #dceaff;
+}
+
+#service-dialog #dialog-title {
+    margin: 8px 28px 10px;
+    color: #102a43;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(23px, 4vw, 30px);
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+#service-dialog #dialog-description {
+    margin: 0 28px 22px;
+    color: #52677d;
+    font-size: 15px;
     line-height: 1.75;
 }
 
-/* Responsive layout */
+#service-dialog h3 {
+    margin: 0 28px 10px;
+    color: #102a43;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+#service-dialog #dialog-requirements {
+    margin: 0 28px 20px;
+    padding-left: 22px;
+    color: #334e68;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+#service-dialog #dialog-requirements li {
+    margin-bottom: 3px;
+    padding-left: 4px;
+}
+
+#service-dialog .dialog-note {
+    margin: 0 28px 22px;
+    padding: 14px 16px;
+    border: 1px solid #f4d58d;
+    border-radius: 10px;
+    background: #fff7e5;
+    color: #754b08;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+#service-dialog .dialog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 0;
+    padding: 16px 28px 24px;
+    border-top: 1px solid #e8eef5;
+    background: #ffffff;
+}
+
+#service-dialog .dialog-actions a,
+#service-dialog .dialog-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 11px 20px;
+    border: 1px solid #d9e2ec;
+    border-radius: 9px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#service-dialog .dialog-actions a {
+    border-color: #1769d1;
+    background: #1769d1;
+    color: #ffffff;
+}
+
+#service-dialog .dialog-actions a:hover {
+    background: #0d47a1;
+}
+
+#service-dialog button:focus-visible,
+#service-dialog a:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* =========================
+   RESPONSIVE LAYOUT
+========================= */
 
 @media (max-width: 900px) {
-    .services-grid,
-    .services-process-grid {
+    .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
 
@@ -3562,27 +3934,73 @@
         padding: 60px 0;
     }
 
-    .services-grid,
-    .services-process-grid {
+    .services-grid {
         grid-template-columns: 1fr;
-    }
-
-    .service-card,
-    .process-card {
-        padding: 25px;
     }
 
     .services-controls {
         align-items: stretch;
         flex-direction: column;
     }
+
+    .service-card {
+        padding: 22px;
+    }
+
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+    .services-contact {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 23px;
+    }
+
+    #service-dialog.service-dialog {
+        width: calc(100% - 24px);
+        max-height: 88vh;
+        border-radius: 14px;
+    }
+
+    #service-dialog .dialog-top {
+        padding: 18px 18px 8px;
+    }
+
+    #service-dialog #dialog-title {
+        margin: 8px 18px;
+        font-size: 23px;
+    }
+
+    #service-dialog #dialog-description {
+        margin: 0 18px 18px;
+        font-size: 14px;
+    }
+
+    #service-dialog h3 {
+        margin: 0 18px 8px;
+        font-size: 18px;
+    }
+
+    #service-dialog #dialog-requirements {
+        margin: 0 18px 18px;
+        padding-left: 20px;
+    }
+
+    #service-dialog .dialog-note {
+        margin: 0 18px 18px;
+        font-size: 12px;
+    }
+
+    #service-dialog .dialog-actions {
+        padding: 14px 18px 18px;
+    }
+
+    #service-dialog .dialog-actions a,
+    #service-dialog .dialog-actions button {
+        flex: 1 1 auto;
+    }
 }
-
-
-
-
-
-
 
 
 
@@ -3740,7 +4158,7 @@
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(250, 249, 249, 0.06);
     right: -80px;
     bottom: -100px;
 }
@@ -3776,6 +4194,7 @@
     margin: 0 0 18px;
     font-size: 1.8rem;
     line-height: 1.25;
+    color: #ffffff;
 }
 
 

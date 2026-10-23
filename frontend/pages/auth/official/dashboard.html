@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102a43">
+
+    <title>Official Dashboard | iUlat</title>
+
+    <link rel="stylesheet" href="../../../assets/css/global.css">
+    <link rel="stylesheet" href="../../../assets/css/official-dashboard.css">
+
+    <script src="../../assets/js/official-dashboard.js" defer></script>
+</head>
+
+<body class="official-dashboard-page">
+
+<div class="official-layout">
+
+    <div class="official-sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="official-sidebar" id="officialSidebar">
+
+        <a href="#dashboard" class="official-brand">
+            <span class="official-brand-mark">iU</span>
+            <span class="official-brand-copy">
+                <strong>iUlat</strong>
+                <small>Official Portal</small>
+            </span>
+        </a>
+
+        <div class="official-sidebar-group">
+            <p class="official-nav-heading">Workspace</p>
+
+            <nav class="official-nav" aria-label="Main navigation">
+                <a href="#dashboard" class="official-nav-link" data-view="dashboard">
+                    <span class="nav-icon" aria-hidden="true">▦</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#announcements" class="official-nav-link" data-view="announcements">
+                    <span class="nav-icon" aria-hidden="true">▤</span>
+                    <span>Announcements</span>
+                </a>
+                <a href="#residents" class="official-nav-link" data-view="residents">
+                    <span class="nav-icon" aria-hidden="true">♙</span>
+                    <span>Residents</span>
+                </a>
+                <a href="#reports" class="official-nav-link" data-view="reports">
+                    <span class="nav-icon" aria-hidden="true">⚑</span>
+                    <span>Incident Reports</span>
+                </a>
+                <a href="#services" class="official-nav-link" data-view="services">
+                    <span class="nav-icon" aria-hidden="true">▧</span>
+                    <span>Services &amp; Payouts</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="official-sidebar-group">
+            <p class="official-nav-heading">Account</p>
+
+            <nav class="official-nav" aria-label="Account navigation">
+                <a href="#settings" class="official-nav-link" data-view="settings">
+                    <span class="nav-icon" aria-hidden="true">⚙</span>
+                    <span>Settings</span>
+                </a>
+                <button type="button" class="official-nav-link official-signout" id="signOutButton">
+                    <span class="nav-icon" aria-hidden="true">↪</span>
+                    <span>Sign Out</span>
+                </button>
+            </nav>
+        </div>
+
+        <div class="official-sidebar-footer">
+            <div class="official-footer-mark">iU</div>
+            <div>
+                <strong>iUlat</strong>
+                <small>Barangay Information Portal</small>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="official-main">
+
+        <header class="official-topbar">
+            <div class="official-topbar-left">
+                <button type="button" class="official-menu-toggle" id="sidebarToggle"
+                        aria-label="Open navigation menu"
+                        aria-controls="officialSidebar"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div>
+                    <p class="official-breadcrumb">Official Portal / <span id="crumb">Overview</span></p>
+                    <h1 id="pageTitle">Dashboard</h1>
+                </div>
+            </div>
+
+            <div class="official-topbar-right">
+                <div class="official-user-copy">
+                    <strong id="userName">Barangay Official</strong>
+                    <small id="userRole">Official account</small>
+                </div>
+                <div class="official-user-avatar" id="userAvatar" aria-hidden="true">BO</div>
+            </div>
+        </header>
+
+        <div class="official-content">
+
+            <!-- ========== VIEW: DASHBOARD ========== -->
+            <section class="view" id="view-dashboard">
+
+                <section class="official-welcome">
+                    <div>
+                        <p class="official-eyebrow">Barangay management</p>
+                        <h2>Welcome to the Official Portal</h2>
+                        <p>Manage public announcements, resident records, incident reports, and barangay services from one place.</p>
+                    </div>
+                    <div class="official-welcome-mark" aria-hidden="true">iU</div>
+                </section>
+
+                <section class="official-section">
+                    <div class="official-section-heading">
+                        <div>
+                            <h2>Management overview</h2>
+                            <p>Totals update as you add or remove records.</p>
+                        </div>
+                    </div>
+
+                    <div class="official-stats-grid">
+                        <a class="official-stat-card" href="#announcements">
+                            <div class="official-stat-top">
+                                <span class="official-stat-icon blue">▤</span>
+                            </div>
+                            <p class="official-stat-label">Announcements</p>
+                            <p class="official-stat-value" id="statAnnouncements">0</p>
+                            <p class="official-stat-note">Published notices</p>
+                        </a>
+
+                        <a class="official-stat-card" href="#residents">
+                            <div class="official-stat-top">
+                                <span class="official-stat-icon purple">♙</span>
+                            </div>
+                            <p class="official-stat-label">Registered residents</p>
+                            <p class="official-stat-value" id="statResidents">0</p>
+                            <p class="official-stat-note">Resident records</p>
+                        </a>
+
+                        <a class="official-stat-card" href="#reports">
+                            <div class="official-stat-top">
+                                <span class="official-stat-icon orange">⚑</span>
+                            </div>
+                            <p class="official-stat-label">Incident reports</p>
+                            <p class="official-stat-value" id="statReports">0</p>
+                            <p class="official-stat-note" id="statReportsNote">0 still open</p>
+                        </a>
+
+                        <a class="official-stat-card" href="#services">
+                            <div class="official-stat-top">
+                                <span class="official-stat-icon green">▧</span>
+                            </div>
+                            <p class="official-stat-label">Services &amp; payouts</p>
+                            <p class="official-stat-value" id="statServices">0</p>
+                            <p class="official-stat-note">Listed items</p>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="official-section">
+                    <div class="official-recent-grid">
+                        <div class="panel">
+                            <h3 class="panel-title">Latest announcements</h3>
+                            <div id="recentAnnouncements"></div>
+                        </div>
+                        <div class="panel">
+                            <h3 class="panel-title">Recent incident reports</h3>
+                            <div id="recentReports"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="official-section official-notice-panel">
+                    <div class="official-notice-icon" aria-hidden="true">i</div>
+                    <div>
+                        <h2>Frontend demo mode</h2>
+                        <p>Records you add here are saved only in this browser. They are not shared with other devices or officials until the database and backend are connected.</p>
+                    </div>
+                </section>
+            </section>
+
+            <!-- ========== VIEW: ANNOUNCEMENTS ========== -->
+            <section class="view" id="view-announcements" hidden>
+                <div class="module-grid">
+                    <div class="panel">
+                        <h3 class="panel-title">New announcement</h3>
+                        <form data-form="announcements">
+                            <div class="field">
+                                <label for="annTitle">Title</label>
+                                <input id="annTitle" name="title" required placeholder="e.g. Water interruption on Friday">
+                            </div>
+                            <div class="field">
+                                <label for="annCategory">Category</label>
+                                <select id="annCategory" name="category" required>
+                                    <option>Notice</option>
+                                    <option>Event</option>
+                                    <option>Health</option>
+                                    <option>Emergency</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="annMessage">Message</label>
+                                <textarea id="annMessage" name="message" rows="5" required placeholder="Write the announcement residents will read."></textarea>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Publish announcement</button>
+                        </form>
+                    </div>
+
+                    <div class="panel">
+                        <h3 class="panel-title">Published announcements</h3>
+                        <div id="announcementList"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== VIEW: RESIDENTS ========== -->
+            <section class="view" id="view-residents" hidden>
+                <div class="module-grid">
+                    <div class="panel">
+                        <h3 class="panel-title">Add resident</h3>
+                        <form data-form="residents">
+                            <div class="field">
+                                <label for="resName">Full name</label>
+                                <input id="resName" name="name" required placeholder="Juan Dela Cruz">
+                            </div>
+                            <div class="field">
+                                <label for="resAddress">Address / Purok</label>
+                                <input id="resAddress" name="address" required placeholder="Purok 3, Sample Street">
+                            </div>
+                            <div class="field">
+                                <label for="resContact">Contact number</label>
+                                <input id="resContact" name="contact" type="tel" required placeholder="09XX XXX XXXX">
+                            </div>
+                            <button class="btn btn-primary" type="submit">Save resident</button>
+                        </form>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-head">
+                            <h3 class="panel-title">Resident records</h3>
+                            <input type="search" id="residentSearch" class="search" placeholder="Search name or address" aria-label="Search residents">
+                        </div>
+                        <div class="table-wrap">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th>Contact</th>
+                                        <th><span class="sr-only">Actions</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="residentRows"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== VIEW: INCIDENT REPORTS ========== -->
+            <section class="view" id="view-reports" hidden>
+                <div class="module-grid">
+                    <div class="panel">
+                        <h3 class="panel-title">Log an incident</h3>
+                        <form data-form="reports">
+                            <div class="field">
+                                <label for="repTitle">What happened</label>
+                                <input id="repTitle" name="title" required placeholder="e.g. Broken streetlight">
+                            </div>
+                            <div class="field">
+                                <label for="repLocation">Location</label>
+                                <input id="repLocation" name="location" required placeholder="Purok 2, near the covered court">
+                            </div>
+                            <div class="field">
+                                <label for="repUrgency">Urgency</label>
+                                <select id="repUrgency" name="urgency" required>
+                                    <option>Low</option>
+                                    <option>Medium</option>
+                                    <option>High</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="repDetails">Details</label>
+                                <textarea id="repDetails" name="details" rows="4" placeholder="Add any extra information."></textarea>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Save report</button>
+                        </form>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-head">
+                            <h3 class="panel-title">Incident reports</h3>
+                            <select id="reportFilter" class="search" aria-label="Filter by status">
+                                <option value="">All statuses</option>
+                                <option>Pending</option>
+                                <option>In progress</option>
+                                <option>Resolved</option>
+                            </select>
+                        </div>
+                        <div class="table-wrap">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Report</th>
+                                        <th>Urgency</th>
+                                        <th>Status</th>
+                                        <th><span class="sr-only">Actions</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reportRows"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== VIEW: SERVICES & PAYOUTS ========== -->
+            <section class="view" id="view-services" hidden>
+                <div class="module-grid">
+                    <div class="panel">
+                        <h3 class="panel-title">New service or payout</h3>
+                        <form data-form="services">
+                            <div class="field">
+                                <label for="svType">Type</label>
+                                <select id="svType" name="type" required>
+                                    <option>Service</option>
+                                    <option>Payout</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="svTitle">Title</label>
+                                <input id="svTitle" name="title" required placeholder="e.g. Barangay clearance">
+                            </div>
+                            <div class="field">
+                                <label for="svSchedule">Schedule / date</label>
+                                <input id="svSchedule" name="schedule" required placeholder="e.g. Mon–Fri, 8 AM–5 PM">
+                            </div>
+                            <div class="field">
+                                <label for="svDetails">Details</label>
+                                <textarea id="svDetails" name="details" rows="4" placeholder="Requirements, amount, where to claim."></textarea>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Save item</button>
+                        </form>
+                    </div>
+
+                    <div class="panel">
+                        <h3 class="panel-title">Services &amp; payouts</h3>
+                        <div id="serviceList"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== VIEW: SETTINGS ========== -->
+            <section class="view" id="view-settings" hidden>
+                <div class="module-grid">
+                    <div class="panel">
+                        <h3 class="panel-title">Profile</h3>
+                        <form id="profileForm">
+                            <div class="field">
+                                <label for="setName">Display name</label>
+                                <input id="setName" name="name" required>
+                            </div>
+                            <div class="field">
+                                <label for="setRole">Position</label>
+                                <input id="setRole" name="role" required placeholder="e.g. Barangay Secretary">
+                            </div>
+                            <button class="btn btn-primary" type="submit">Save profile</button>
+                            <p class="form-note" id="profileNote" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+
+                    <div class="panel">
+                        <h3 class="panel-title">Saved data</h3>
+                        <p class="panel-text">All records on this page are stored in this browser only. Clearing them removes every announcement, resident, report, and service you added.</p>
+                        <button type="button" class="btn btn-danger" id="clearData">Clear all records</button>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="official-page-footer">
+                <p>iUlat — Barangay Community Announcements and Real-Time Event Dissemination Platform</p>
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
